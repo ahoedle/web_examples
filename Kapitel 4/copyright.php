@@ -1,0 +1,1 @@
+<p>&copy; 2012 Example.com</p>
