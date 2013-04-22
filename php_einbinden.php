@@ -10,6 +10,7 @@
 <body>
 
 	<?php
+		// Test
 		echo "Ein erstes PHP-Dokument";
 	?>
 
