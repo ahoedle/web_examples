@@ -39,7 +39,6 @@
 		
 		$pk = new Premiumkunde("Hans-Heinerich");
 		echo($pk);
-		echo("test");
 	?>
 
 </body>
