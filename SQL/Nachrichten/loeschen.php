@@ -1,5 +1,7 @@
 <?php
 
+	require_once("db_verbindung.php");
+
 	// Komponenten für die absolute URL zur Umleitung definieren
 	$host = htmlspecialchars($_SERVER["HTTP_HOST"]);
 	$uri = rtrim(dirname(htmlspecialchars($_SERVER["PHP_SELF"])), "/\\");
@@ -14,17 +16,6 @@
 		LÖSCHVORGANG über prepared-statements
 	*/
 	$id = $_GET["id"];
-	
-	$mysqli = new mysqli("localhost", "root", "root", "aktuell");
-		
-	if ($mysqli->connect_error) {
-		echo("Fehler bei der Verbindung: " . mysqli_connect_error);
-		exit;
-	}
-	
-	if (!$mysqli->set_charset("utf8")) {
-		echo("Fehler beim Laden von UTF8 " . $mysqli->error);
-	}
 	
 	if ($stmt = $mysqli->prepare("DELETE FROM aktuell WHERE id=?")) {
 		$stmt->bind_param("i", $id);

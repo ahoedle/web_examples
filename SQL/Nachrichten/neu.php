@@ -4,12 +4,13 @@
 		Dieses Skript zeigt ein Formular zur Eingaben von neuen Nachrichten an.
 	*/
 	
+	require_once("db_verbindung.php");
+	
 	/*
 		nachdem eine Nachricht eingetragen wurde, soll automatisch wieder auf die anzeigen.php-Seite umgeleitet werden.
 		Deshalb muss hier die absolute URL zusammengestellt werden
 	*/
 	$host = htmlspecialchars($_SERVER["HTTP_HOST"]);
-	
 	$uri = rtrim(dirname(htmlspecialchars($_SERVER["PHP_SELF"])), "/\\");
 	$extra = "anzeigen.php";
 	
@@ -55,17 +56,6 @@
 		wenn $_POST["titel"] nicht leer ist, wurde das Formular bereits ausgefüllt und etwas beim Titel eingetragen. In diesem Fall findet die Verarbeitung des Formulars statt.
 	*/
 	} else {
-	
-		$mysqli = new mysqli("localhost", "root", "root", "aktuell");
-			
-		if ($mysqli->connect_error) {
-			echo("Fehler bei der Verbindung: " . mysqli_connect_error);
-			exit;
-		}
-		
-		if (!$mysqli->set_charset("utf8")) {
-			echo("Fehler beim Laden von UTF8 " . $mysqli->error);
-		}
 	
 		if ($stmt = $mysqli->prepare("INSERT INTO aktuell (titel, text) VALUES (?, ?)")) {
 			$titel = $_POST["titel"];

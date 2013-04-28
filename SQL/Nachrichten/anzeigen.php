@@ -33,16 +33,7 @@
 <body>
 
 	<?php
-		$mysqli = new mysqli("localhost", "root", "root", "aktuell");
-			
-		if ($mysqli->connect_error) {
-			echo("Fehler bei der Verbindung: " . mysqli_connect_error);
-			exit;
-		}
-		
-		if (!$mysqli->set_charset("utf8")) {
-			echo("Fehler beim Laden von UTF8 " . $mysqli->error);
-		}
+		require_once("db_verbindung.php");
 		
 		if ($stmt = $mysqli->prepare("SELECT id, titel, text FROM aktuell")) {
 			$stmt->execute();

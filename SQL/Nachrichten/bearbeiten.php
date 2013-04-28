@@ -2,13 +2,25 @@
 	
 	/*
 		Dieses Skript ist für die Bearbeitung von Nachrichten zuständig.
+		
+		Bei der Bearbeitung gibt es zwei voneinander relativ unabhängige Vorgänge:
+		
+		1 - Wenn das Skript über "anzeigen.php" aufgerufen wurde, wird die ID des Datensatzes übergeben, der bearbeitet werden soll. 
+			Jetzt muss Titel und Text zur entsprechenden ID über SELECT ausgelesen und im Formular angezeigt werden
+		
+		2 - Wird das Formular abgesendet, muss der UPDATE-Vorgang durchgeführt werden und wieder eine Umleitung zu "anzeigen.php" erfolgen.
 	*/
+
+	require_once("db_verbindung.php");
 
 	// Komponenten für die absolute URL zur Umleitung definieren
 	$host = htmlspecialchars($_SERVER["HTTP_HOST"]);
 	$uri = rtrim(dirname(htmlspecialchars($_SERVER["PHP_SELF"])), "/\\");
 	$extra = "anzeigen.php";
 	
+	/*
+		SIEHE 1
+	*/
 	if (empty($_POST["titel"])) {
 		if (!isset($_GET["id"]) || !is_numeric($_GET["id"])) {
 			// Umleitung auf die Startseite
@@ -37,17 +49,6 @@
 			<?php
 				$id = $_GET["id"];
 				
-				$mysqli = new mysqli("localhost", "root", "root", "aktuell");
-			
-				if ($mysqli->connect_error) {
-					echo("Fehler bei der Verbindung: " . mysqli_connect_error);
-					exit;
-				}
-				
-				if (!$mysqli->set_charset("utf8")) {
-					echo("Fehler beim Laden von UTF8 " . $mysqli->error);
-				}
-				
 				if ($stmt = $mysqli->prepare("SELECT id, titel, text FROM aktuell WHERE id=?")) {
 					$stmt->bind_param("i", $id);
 					$stmt->execute();
@@ -66,6 +67,12 @@
 				Text <br />
 				<textarea name="text" rows="5" cols="30"><?php echo(htmlspecialchars($text)) ?></textarea><br />
 				
+				<!-- 	
+						Beim ersten Aufruf von "bearbeiten.php" über die "anzeigen.php"-Seite hängt am Dateinamen die id des Datensatzes (siehe Schritt 1)
+				
+						Wenn das Formular bearbeitet und abgesendet wird, wird es an "bearbeiten.php" gesendet und zwar ohne Parameter (siehe Schritt 2). 
+						Damit die id jetzt ausgelesen werden kann, wird sie im Formular in ein verstecktes Feld eingetragen
+				-->
 				<input type="hidden" name="id" value="<?php echo($id); ?>" />
 				<input type="submit" />
 		
@@ -73,19 +80,13 @@
 		
 		</html>
 <?php
+
+	/*
+		SIEHE 2
+	*/
 	} else {
+		// die id wird über ein verstecktes Feld übertragen und steht somit in $_POST["id"]
 		$id = (int)$_POST["id"];
-		
-		$mysqli = new mysqli("localhost", "root", "root", "aktuell");
-	
-		if ($mysqli->connect_error) {
-			echo("Fehler bei der Verbindung: " . mysqli_connect_error);
-			exit;
-		}
-		
-		if (!$mysqli->set_charset("utf8")) {
-			echo("Fehler beim Laden von UTF8 " . $mysqli->error);
-		}
 		
 		if ($stmt = $mysqli->prepare("UPDATE aktuell SET titel=?, text=? WHERE id=?")) {
 			$titel = $_POST["titel"];
