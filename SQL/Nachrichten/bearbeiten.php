@@ -22,7 +22,7 @@
 		<html>
 		
 		<head>
-			<title>News verwalten</title>
+			<title>News verwalten Test</title>
 			<meta charset="UTF-8">
 			<style type="text/css">
 				body {
