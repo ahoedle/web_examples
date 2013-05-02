@@ -1,0 +1,79 @@
+
+/* 
+===============================================================
+Stylesheet für die Beispielsite aus "Little Boxes"
+
+Stand:
+Datei:
+Datum:
+Autor:
+
+Aufbau: 1. Kalibrierung und Restauration
+		2. Allgemeine Styles
+		3. Styles für Layoutbereiche
+		4. Sonstige Styles
+		
+Verwendetes Farbschema:
+
+Eingebundene Grafiken:
+=============================================================== 
+*/
+
+/* 
+===============================================================
+1. 	Kalibrierung und Restauration
+
+	Enthält die Regeln zur Kalibrierung und zur Restaurierung
+	der wichtigsten Abstände	
+=============================================================== 
+*/
+
+/* CSS-Reset */
+* {
+	padding: 0;
+	margin: 0;
+}
+
+
+/* 
+===============================================================
+2. 	Allgemeine Styles
+
+	Allgemeine, für die ganze Seite geltenden Einstellungen:
+	
+	a) die Elemente html und body
+	b) Block-Elemente wie
+			Überschriften
+			Absätze
+			Listen
+			Zitate
+			...
+	c) Inline-Elemente wie
+			Hyperlinks
+			Bilder
+			Elemente wie strong, em
+			...
+	d) allgemeine Klassen und IDs wie
+			.infobox
+			img#logo
+			...
+=============================================================== 
+*/
+
+
+
+/* 
+===============================================================
+3. 	Styles für die Layoutbereiche
+	
+	Selektoren, die nur in einem bestimmten Bereich der Seite
+	gelten
+=============================================================== 
+*/
+
+
+/* 
+===============================================================
+4. Sonstige Styles
+=============================================================== 
+*/
