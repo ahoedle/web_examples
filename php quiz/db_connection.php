@@ -24,12 +24,9 @@ class Test {
 		}
 
 		if ($stmt = $mysqli->prepare("SELECT question, answer1, answer2, answer3, answer4, right_answer FROM questions WHERE category LIKE ?")) {
-		
-			//echo("Verbindung erfolgreich");
+
 			$stmt->bind_param("s", $category);
 			$stmt->execute();
-			//$stmt->bind_result($this->question, $this->answer1, $this->answer2, $this->answer3, $this->answer4, $this->right_answer);
-			//$stmt->fetch();
 			
 			$stmt->bind_result($q, $a1, $a2, $a3, $a4, $ra);
 			
