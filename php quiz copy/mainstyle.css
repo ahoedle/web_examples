@@ -1,0 +1,23 @@
+#main {
+   background: #fff7d5;
+   padding: 0;
+   border: 1px solid #fc0;
+   margin: 10px 297px 10px 247px;
+   position: relative;
+}
+
+
+HTML>BODY #right {
+   margin: 9px -288px 10px 0;
+}
+
+#left {
+   background: #ffd5ee;
+   padding: 0;
+   border: 1px solid #f09;
+   margin: 10px 10px 10px -238px;
+   width: 225px;
+   position: absolute;
+   top: -10px;
+   left: 0;
+}
