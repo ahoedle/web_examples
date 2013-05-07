@@ -1,0 +1,114 @@
+/* 
+===============================================================
+Stylesheet für die Beispielsite aus "Little Boxes"
+
+Stand: Druckversion
+Datei: druckversion.css
+Media: print
+Datum: 
+Autor:
+
+Aufbau: 1. Kalibrierung und Restauration
+		2. Allgemeine Styles
+		3. Styles für Layoutbereiche
+		4. Sonstige Styles
+		
+Verwendetes Farbschema:
+
+Eingebundene Grafiken:
+=============================================================== 
+*/
+
+/* 
+===============================================================
+1. 	Kalibrierung und Restauration
+
+	Enthält die Regeln zur Kalibrierung und zur Restaurierung
+	der wichtigsten Abstände	
+=============================================================== 
+*/
+
+/* CSS-Reset */
+* {
+	padding: 0; 
+	margin: 0;
+}
+
+/* Abstand nach unten */
+h2, p, ul, ol {
+	margin-bottom: 1em;
+}
+
+/* Verschachtelte Listen ohne Abstand */
+ul ul {
+	margin-bottom: 0em;
+}
+
+/* Abstand von links */
+li {
+	margin-left: 1em;
+}
+
+/* 
+===============================================================
+2. 	Allgemeine Styles
+
+	Allgemeine, für die ganze Seite geltenden Einstellungen:
+	
+	a) die Elemente html und body
+	b) Block-Elemente wie
+			Überschriften
+			Absätze
+			Listen
+			Zitate
+			...
+	c) Inline-Elemente wie
+			Hyperlinks
+			Bilder
+			Elemente wie strong, em
+			...
+	d) allgemeine Klassen und IDs wie
+			.infobox
+			img#logo
+			...
+=============================================================== 
+*/
+
+body {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 11pt;
+}
+
+h1, h2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	font-size: 24pt;
+}
+
+h2 {
+	font-size: 18pt;
+	padding-top: 6pt;
+	border-top: 3pt solid #d90000;
+	margin-top: 12pt;
+}
+
+/* 
+===============================================================
+3. 	Styles für die Layoutbereiche
+	
+	Selektoren, die nur in einem bestimmten Bereich der Seite
+	gelten
+=============================================================== 
+*/
+
+#navibereich {
+	display: none;
+}
+
+/* 
+===============================================================
+4. Sonstige Styles
+=============================================================== 
+*/
