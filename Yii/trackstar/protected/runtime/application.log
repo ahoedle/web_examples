@@ -1,0 +1,62 @@
+2013/05/13 18:36:40 [warning] [application] Failed to set unsafe attribute "description" of "Project".
+in /Applications/MAMP/htdocs/web_examples/Yii/trackstar/protected/controllers/ProjectController.php (72)
+in /Applications/MAMP/htdocs/web_examples/Yii/trackstar/index.php (13)
+2013/05/13 18:36:40 [warning] [application] Failed to set unsafe attribute "create_time" of "Project".
+in /Applications/MAMP/htdocs/web_examples/Yii/trackstar/protected/controllers/ProjectController.php (72)
+in /Applications/MAMP/htdocs/web_examples/Yii/trackstar/index.php (13)
+2013/05/13 18:36:40 [warning] [application] Failed to set unsafe attribute "update_time" of "Project".
+in /Applications/MAMP/htdocs/web_examples/Yii/trackstar/protected/controllers/ProjectController.php (72)
+in /Applications/MAMP/htdocs/web_examples/Yii/trackstar/index.php (13)
+2013/05/13 18:39:08 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('project/admin')
+#9 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/web_examples/Yii/trackstar/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/web_examples/Yii/trackstar/index.php?r=project/admin
+HTTP_REFERER=http://localhost:8888/web_examples/Yii/trackstar/index.php?r=project/view&id=21
+---
+2013/05/13 19:41:37 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trackstar_dev.tbl_issu' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_issu`.
+in /Applications/MAMP/htdocs/web_examples/Yii/trackstar/index.php (13)
+2013/05/13 20:19:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issue/admin')
+#9 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/web_examples/Yii/trackstar/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/web_examples/Yii/trackstar/index.php?r=issue/admin
+HTTP_REFERER=http://localhost:8888/web_examples/Yii/trackstar/index.php?r=issue/create
+---
+2013/05/13 20:19:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issue/admin')
+#9 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/web_examples/Yii/trackstar/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/web_examples/Yii/trackstar/index.php?r=issue/admin
+HTTP_REFERER=http://localhost:8888/web_examples/Yii/trackstar/index.php?r=issue/create
+---

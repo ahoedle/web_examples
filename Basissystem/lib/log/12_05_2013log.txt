@@ -1,0 +1,4 @@
+WARN::12.05.2013 11:10:281368349828 - Dies ist eine Warnung - /Applications/MAMP/htdocs/web_examples/Basissystem/index.php
+INFO::12.05.2013 11:10:281368349828 - Dies ist einen Information - /Applications/MAMP/htdocs/web_examples/Basissystem/index.php
+WARN::12.05.2013 11:25:451368350745 - Dies ist eine Warnung - /Applications/MAMP/htdocs/web_examples/Basissystem/index.php
+INFO::12.05.2013 11:25:451368350745 - Dies ist einen Information - /Applications/MAMP/htdocs/web_examples/Basissystem/index.php

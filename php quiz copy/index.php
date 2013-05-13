@@ -53,35 +53,61 @@
 		</head> 
 		
 		<body>
-
-			<div id="header">
-				<h1>QUIZ</h1>
-			</div>
-			
-			<div id="main">
-			
-				<div id="left">
-					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+			<div id="wrapper">
+				<div id="header">
+					<h1>QUIZ</h1>
 				</div>
-
-				<?php echo("<b>" . $test->question[intval($_SESSION["num"])] . "</b> <br/><br/>\n");?>
-			
-				<table style="boder:0; width:300px; height:100px;">
-					<tr> 
-						<td style="background:lightgreen;"><?php echo("<a href='index.php?a=1'>".$test->answer1[intval($_SESSION["num"])]."</a>");?></td> 
-					</tr>
-					<tr> 				
-						<td style="background:lightblue;"><?php echo("<a href='index.php?a=2'>".$test->answer2[intval($_SESSION["num"])]."</a>");?></td> 
-					</tr>
-					<tr> 
-						<td style="background:lightgray;"><?php echo("<a href=\"index.php?a=3\">".$test->answer3[intval($_SESSION["num"])]."</a>");?></td> 
-					</tr>
-					<tr> 
-						<td style="background:yellow;"><?php echo("<a href=\"index.php?a=4\">".$test->answer4[intval($_SESSION["num"])]."</a>");?></td> 
-					</tr>
-				</table>
+				
+				<div id="main">
+				
+					<div id="left">
+						<div class="accordion vertical">  
+						    <section>  
+						        <h2>About Us</h2>  
+						        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>  
+						    </section>  
+						  
+						    <section>  
+						        <h2>Services</h2>  
+						        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>  
+						    </section>  
+						  
+						    <section>  
+						        <h2>Blog</h2>  
+						        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>  
+						    </section>  
+						  
+						    <section>  
+						        <h2>Portfolio</h2>  
+						        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>  
+						    </section>  
+						  
+						    <section>  
+						        <h2>Contact</h2>  
+						        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>  
+						    </section>  
+						</div>  
+					</div>
+	
+					<?php echo("<b>" . $test->question[intval($_SESSION["num"])] . "</b> <br/><br/>\n");?>
+				
+					<table style="boder:0; width:300px; height:100px;">
+						<tr> 
+							<td style="background:lightgreen;"><?php echo("<a href='index.php?a=1'>".$test->answer1[intval($_SESSION["num"])]."</a>");?></td> 
+						</tr>
+						<tr> 				
+							<td style="background:lightblue;"><?php echo("<a href='index.php?a=2'>".$test->answer2[intval($_SESSION["num"])]."</a>");?></td> 
+						</tr>
+						<tr> 
+							<td style="background:lightgray;"><?php echo("<a href=\"index.php?a=3\">".$test->answer3[intval($_SESSION["num"])]."</a>");?></td> 
+						</tr>
+						<tr> 
+							<td style="background:yellow;"><?php echo("<a href=\"index.php?a=4\">".$test->answer4[intval($_SESSION["num"])]."</a>");?></td> 
+						</tr>
+					</table>
+				</div>
 			</div>
-		
 		</body>
 		
 	</html> 
+
