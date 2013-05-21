@@ -1,0 +1,361 @@
+
+/* 
+===============================================================
+Stylesheet für die Beispielsite aus "Little Boxes"
+
+Stand:
+Datei:
+Datum:
+Autor:
+
+Aufbau: 1. Kalibrierung und Restauration
+		2. Allgemeine Styles
+		3. Styles für Layoutbereiche
+		4. Sonstige Styles
+		
+Verwendetes Farbschema:
+
+Eingebundene Grafiken:
+=============================================================== 
+*/
+
+/* 
+===============================================================
+1. 	Kalibrierung und Restauration
+
+	Enthält die Regeln zur Kalibrierung und zur Restaurierung
+	der wichtigsten Abstände	
+=============================================================== 
+*/
+
+/* CSS-Reset */
+* {
+	padding: 0;
+	margin: 0;
+}
+
+/* Bildlaufleiste immer anzeigen */	
+html {
+	overflow-y: scroll;
+}
+
+/* Abstand nach unten */
+h2, p, ul, ol {
+	margin-bottom: 1em;
+}
+
+/* Verschachtelte Listen ohne Abstand */
+ul ul {
+	margin-bottom: 0em;
+}
+
+/* Abstand von links */
+li {
+	margin-left: 1em;
+}
+
+/* 
+===============================================================
+2. 	Allgemeine Styles
+
+	Allgemeine, für die ganze Seite geltenden Einstellungen:
+	
+	a) die Elemente html und body
+	b) Block-Elemente wie
+			Überschriften
+			Absätze
+			Listen
+			Zitate
+			...
+	c) Inline-Elemente wie
+			Hyperlinks
+			Bilder
+			Elemente wie strong, em
+			...
+	d) allgemeine Klassen und IDs wie
+			.infobox
+			img#logo
+			...
+=============================================================== 
+*/
+
+body {
+	background-color: #8c8c8c;
+	color: white; /* Schriftfarbe */
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+
+h1 {
+	font-size: 150%;
+}
+
+h2 {
+	font-size: 130%;
+}
+
+address {
+	text-align: center;
+	font-size: 80%;
+	font-style: normal;
+	letter-spacing: 2px;
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none; /* Unterstreichung der Hyperlinks entfernen */
+}
+
+a:link { /* unbesuchte Hyperlinks */
+	color: #d90000;
+}
+
+a:visited { /* besuchte Hyperlinks */
+	color: #cc6666;
+}
+
+/* 
+	a:hover --> verändert den Hyperlink, während der Mauszeiger darüber schwebt
+	
+	a:focus --> gestaltet den Hyperlink, wenn der Link per Tastatur ausgewählt wird
+*/
+a:hover, a:focus {
+	border-bottom: 1px solid #d90000;
+}
+
+/*
+	a:active --> formatiert den Hyperlink, wenn die Maustaste über dem Link gedrückt wird
+*/
+a:active {
+	color: white;
+}
+
+/* gestalte die Grafik mit der id="logo" */
+img#logo {
+	background-color: white;
+	color: black;
+	padding: 10px;
+	border: 10px solid #d9d9d9;
+}
+
+.bildlinks {
+	float: left;
+	padding: 3px;
+	border: 5px solid #ccc;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.bildrechts {
+	float: right;
+	padding: 3px;
+	border: 5px solid #ccc;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+.clearing {
+	clear: both;
+}
+
+/* 
+===============================================================
+3. 	Styles für die Layoutbereiche
+	
+	Selektoren, die nur in einem bestimmten Bereich der Seite
+	gelten
+=============================================================== 
+*/
+
+/* gestalte das div mit der id="wrapper" */
+div#wrapper {
+	background-color: white;
+	color: black;
+	width: 720px; /* feste Breite definieren */
+	margin: 10px auto;
+	/*
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	*/
+}
+
+div#kopfbereich {
+	position: relative;
+	background-color: #f3c600;
+	background-image: url(farbverlauf.jpg);
+	color: black;
+	padding: 10px 20px 0px 20px;
+	/*
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 0;
+	padding-left: 20px;
+	*/
+}
+	
+	p#slogan {
+		position: absolute;
+		text-align: right;
+		top: 25px;
+		left: 50%;
+		padding: 5px 0px 5px 0px;
+		margin-bottom: 0em;
+	}
+	/*
+		diese Regel betrifft den Absatz mit der id="slogan" und dort nur den Textteil, der im <span>...</span> eingeschlossen ist.
+	*/
+	p#slogan span {
+		display: block;
+		color: #d90000;
+	}
+
+div#navibereich {
+	text-align: right;
+	color: black;
+	background: #ffe574 url(farbverlauf.jpg) repeat-y left top;
+	background-color: #ffeda0;
+	padding: 5px 20px 4px 20px;
+	border-bottom: 1px solid #8c8c8c;
+	/*
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 20px;
+	padding-left: 20px;
+	*/
+}
+	
+	div#navibereich ul {
+		margin-bottom: 0em;
+	}
+	
+	div#navibereich li {
+		display: inline; /* li nebeneinander anzeigen */
+		list-style-type: none; /* ohne Aufzählungspunkte */
+		margin: 0px;
+	}
+	
+	div#navibereich a {
+		color: black;
+		background-color: #ffeda0;
+		padding: 4px 8px 4px 8px;
+		border: 1px solid #8c8c8c;
+	}
+	
+	div#navibereich li.sie-sind-hier a {
+		color: black;
+		background-color: white;
+		border-bottom-color: white;
+	}
+	
+	div#navibereich a:hover, div#navibereich a:focus {
+		color: black;
+		background-color: white;
+		border-bottom-color: white;
+	}
+	
+	div#navibereich a:active {
+		color: black;
+		background-color: white;
+		border-bottom-color: white;
+	}
+
+div#textbereich {
+	padding: 20px;
+	/*
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	*/
+}
+
+	/*
+		diese Regel betrifft nur Hyperlinks, die in einer div-Kiste mit dem Attribut id="textbereich" stehen.
+	*/
+	div#textbereich a {
+		border-bottom: 1px dotted #cc0000;
+	}
+	
+	div#textbereich a:hover, div#textbereich a:focus {
+		border-bottom: 1px solid #d90000;
+	}
+
+div#fussbereich {
+	padding: 10px 20px 20px 20px;
+	/*
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	*/
+	border-top: 1px solid #8c8c8c;
+	margin-top: 0px;
+}
+
+/*
+	Dieser Selektor beschränkt das Wirkungsgebiet der quadratischen Aufzählungszeichen auf ungeordnete Listen
+*/
+ul li {
+	list-style-type: square;
+}
+
+/* 
+===============================================================
+4. Sonstige Styles
+=============================================================== 
+*/
+
+form {
+	background-color: #d9d9d9;
+	width: 370px;
+	padding: 20px;
+	border: 1px solid #8c8c8c;
+}
+
+/*
+	hier wird das eigentliche inline-Element "label" zu einem Block-Element.
+	Dadurch rutschen die Eingabefelder in eine neue Zeile unter die Beschriftung.
+*/
+label {
+	display: block;
+	cursor: pointer; /* Mauszeiger wird zur Hand, wenn der Mauszeiger über die Beschriftung schwebt */
+}
+
+input#besuchername, input#besuchermail, textarea {
+	width: 300px;
+	border: 1px solid #8c8c8c;
+	margin-bottom: 1em;
+}
+
+textarea {
+	height: 7em;
+}
+
+input:focus, textarea:focus {
+	background-color: #f3c600;
+}
+
+table {
+	background-color: #ffeda0;
+	border-collapse: collapse;
+	border: none;
+}
+
+thead {
+	background-color: #f3c600;
+}
+
+tfoot {
+	background-color: #F7F1D4;
+	font-size: 80%;
+	border-top: 1px solid #999;
+}
+
+td, th {
+	vertical-align: top;
+	text-align: left;
+	padding: 0.5em 1em;
+}
+

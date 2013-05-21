@@ -1,0 +1,13 @@
+p {
+	margin-left: 25%;
+}
+
+#fixiert {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	background-color: #f3c600;
+	width: 15%;
+	padding: 10px;
+	border: 1px solid black;
+}
