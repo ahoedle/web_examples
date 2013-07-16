@@ -2,17 +2,9 @@
 /* @var $this PageController */
 /* @var $model Page */
 
-$this->breadcrumbs=array(
-	'Pages'=>array('index'),
-	'Create',
-);
-
-$this->menu=array(
-	array('label'=>'List Page', 'url'=>array('index')),
-	array('label'=>'Manage Page', 'url'=>array('admin')),
-);
+$this->tabs = MenuRenderer::renderMainMenu(Yii::app()->user->type, false);
 ?>
-
-<h1>Create Page</h1>
+<h1>Create a new page:</h1></br>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+

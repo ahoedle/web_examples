@@ -106,4 +106,36 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+	
+	public function actionSetup() {
+		$auth = Yii::app()->authManager;
+		
+		$auth->createOperation('createPage');
+		$auth->createOperation('createComment');
+		$auth->createOperation('updatePage');
+		$auth->createOperation('updateUser');
+		$auth->createOperation('updateComment');
+		$auth->createOperation('deleteUser');
+		
+		$task = $auth->createTask('updateOwnPage', 'Allows authors to update their own page', 'return $params["page_user_id"] == Yii::app()->user->id;');
+		$task->addChild('updatePage');
+		
+		$task = $auth->createTask('updateOwnUser', 'Allows a user to update her record', 'return $params["user_id"] == Yii::app()->user->id;');
+		$task->addChild('updateUser');
+		
+		$role = $auth->createRole('public');
+		$role->addChild('updateOwnUser');
+		$role->addChild('createComment');
+
+		$role = $auth->createRole('author');
+		$role->addChild('public');
+		$role->addChild('updateOwnPage');
+		$role->addChild('createPage');
+
+		$role = $auth->createRole('admin');
+		$role->addChild('author');
+		$role->addChild('updatePage');
+		$role->addChild('updateComment');
+		$role->addChild('deleteUser');
+	}
 }

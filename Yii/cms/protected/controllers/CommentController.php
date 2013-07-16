@@ -28,18 +28,24 @@ class CommentController extends Controller
 	public function accessRules()
 	{
 		return array(
+			
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view', 'viewCommentsFromPage', 'createCommentForPage'),
 				'users'=>array('*'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
+			
+			// allow authenticated user (public, author and admin roles) to perform 'create' actions
+			array('allow', 
+				'actions'=>array('create'),
+				'roles'=>array('public', 'admin', 'author'),
 			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+			
+			// allow admin roles to perform 'admin' and 'delete' actions
+			array('allow', 
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'roles'=>array('admin'),
 			),
+			
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
@@ -57,9 +63,28 @@ class CommentController extends Controller
 		));
 	}
 	
+	public static function getCommentsForPage($page) {
+/* 		$page = Page::model()->findByPk($pageID); */
+	
+		$dataProvider=new CActiveDataProvider('Comment', array(
+		    'criteria'=>array(
+		        'condition'=>'page_id='.$page->id,
+		        'with'=>array('page'),
+		        'order' => 'date_entered DESC',
+		    ),
+		    'pagination'=>array(
+		        'pageSize'=>20,
+		    ),
+		));
+		
+		return $dataProvider;		
+	}
+	
 	public function actionViewCommentsFromPage($pageID) {
 	
-		$page = Page::model()->with('comments')->findByPk($pageID);
+/* 		$page = Page::model()->with('comments')->findByPk($pageID); */
+/*
+		$page = Page::model()->findByPk($pageID);
 	
 		$dataProvider=new CActiveDataProvider('Comment', array(
 		    'criteria'=>array(
@@ -71,6 +96,9 @@ class CommentController extends Controller
 		        'pageSize'=>20,
 		    ),
 		));
+*/
+		$page = Page::model()->findByPk($pageID);
+		$dataProvider = $this->getCommentsForPage($page);
 		
 		CommentRenderer::renderCommentsForPage($this, $dataProvider, $pageID, $page->title);
 	}
@@ -79,20 +107,22 @@ class CommentController extends Controller
 		
 		$model = new Comment;
 		
+		
 		// Uncomment the following line if AJAX validation is needed
 		//$this->performAjaxValidation($model);
 
 		if(isset($_POST['Comment'])) {
-		
+			$page = Page::model()->findByPk($pageID);
+			
 			$model->attributes=$_POST['Comment'];
 			$model->page_id = $pageID;
 			
 			if($model->save()) {
-				CommentNavigator::redirectTo_ViewCommentsForPage($this, $pageID);		
+				CommentNavigator::redirectTo_ViewPageWithComments($this, $pageID);		
 			}
 			
 		} else {
-			$page = Page::model()->with('comments')->findByPk($pageID);
+			$page = Page::model()->findByPk($pageID);
 			CommentRenderer::renderCreateView($this, $model, $pageID, $page->title);
 		}
 

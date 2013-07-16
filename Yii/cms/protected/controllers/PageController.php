@@ -7,7 +7,7 @@ class PageController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
-
+	
 	/**
 	 * @return array action filters
 	 */
@@ -27,18 +27,25 @@ class PageController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
+		
+			// allow all users to perform 'index' and 'view' actions
+			array('allow',  
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
+		
+			// only admin roles can create, update, delete and manage content
+			array('allow', 
+				'actions'=>array('create', 'update', 'delete', 'admin'),
+				'roles' => array('admin'),
 			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+		
+			// author roles can create pages and update their own pages 
+			array('allow', 
+				'actions'=>array('create','update', 'myPages'),
+				'roles'=>array('author'),
 			),
+		
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
@@ -50,7 +57,7 @@ class PageController extends Controller
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id)
-	{
+	{	
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
@@ -62,21 +69,28 @@ class PageController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Page;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Page']))
-		{
-			$model->attributes=$_POST['Page'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+		if (Yii::app()->user->checkAccess('createPage')) {
+			$model=new Page;
+	
+			// Uncomment the following line if AJAX validation is needed
+			// $this->performAjaxValidation($model);
+	
+			if(isset($_POST['Page']))
+			{
+				$model->attributes=$_POST['Page'];
+				$model->user_id = Yii::app()->user->id;
+				
+				if($model->save())
+					$this->redirect(array('view','id'=>$model->id));
+			}
+	
+			$this->render('create',array(
+				'model'=>$model,
+			));
+		} else {
+			throw new CHttpException(403, 'got net');
 		}
 
-		$this->render('create',array(
-			'model'=>$model,
-		));
 	}
 
 	/**
@@ -90,17 +104,21 @@ class PageController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
+		
+		if (Yii::app()->user->checkAccess('updatePage') || Yii::app()->user->checkAccess('updateOwnPage', array('page_user_id' => $model->user_id))) {
+			if(isset($_POST['Page']))
+			{
+				$model->attributes=$_POST['Page'];
+				if($model->save())
+					$this->redirect(array('view','id'=>$model->id));
+			}
 
-		if(isset($_POST['Page']))
-		{
-			$model->attributes=$_POST['Page'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			$this->render('update',array('model'=>$model,));
+		} else {
+			throw new CHttpException(403, 'You are not allowed to do this.');
 		}
 
-		$this->render('update',array(
-			'model'=>$model,
-		));
+
 	}
 
 	/**
@@ -127,7 +145,7 @@ class PageController extends Controller
 			'dataProvider'=>$dataProvider,
 		));
 	}
-
+	
 	/**
 	 * Manages all models.
 	 */
@@ -169,6 +187,33 @@ class PageController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+	
+	public function getComments($pageID) {
+		$dataProvider=new CActiveDataProvider('Comment', array(
+		    'criteria'=>array(
+		        'condition'=>'page_id='.$pageID,
+		        'with'=>array('page'),
+		        'order' => 'date_entered DESC',
+		    ),
+/*
+		    'pagination'=>array(
+		        'pageSize'=>20,
+		    ),
+*/
+		));
+		
+		return $dataProvider;		
+	}
+	
+	public function actionMyPages() {
+		$dataProvider=new CActiveDataProvider('Page', array(
+		    'criteria'=>array(
+		        'condition'=>'user_id='.Yii::app()->user->id,
+		        'with'=>array('user'),
+		    ),
+		));
+		$this->render('myPages',array('dataProvider'=>$dataProvider));
 	}
 	
 

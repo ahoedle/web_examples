@@ -10,12 +10,6 @@ $this->breadcrumbs=array(
 	'Create',
 );
 
-/*
-$this->menu=array(
-	array('label'=>'List Comment', 'url'=>array('index')),
-	array('label'=>'Manage Comment', 'url'=>array('admin')),
-);*/
-
 ?>
 
 <h1>Add Comment</h1>

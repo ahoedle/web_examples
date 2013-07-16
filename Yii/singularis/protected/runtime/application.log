@@ -1,0 +1,40 @@
+2013/07/16 09:43:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php?r=gii
+---
+2013/07/16 09:44:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php?r=gii
+---
+2013/07/16 09:45:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php?r=gii
+---
+2013/07/16 09:45:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/?r=gii
+---
+2013/07/16 09:47:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/gii
+---

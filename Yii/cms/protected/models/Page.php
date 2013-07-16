@@ -52,7 +52,7 @@ class Page extends CActiveRecord
 			array('title', 'required'),
 			
 			// user must exist in the related table:
-			array('user_id', 'exist'),
+/* 			array('user_id', 'exist'), */
 			
 			// live needs to be Boolean; default 0:
 			array('live', 'boolean'),
@@ -67,12 +67,12 @@ class Page extends CActiveRecord
 			
 			// set the date_entered to NOW() every time:
 			//array('date_updated', 'default', 'value' => new CDbExpression('NOW()'), 'on' => 'update'),
-                        array('date_updated', 'safe'),
+            array('date_updated', 'safe'),
 			
 			// date_published must be in a format that MySQL likes:
 			//array('date_published', 'date', 'format' => 'YYYY-MM-DD'),
 			//array('date_published', 'default', 'value' => new CDbExpression('NOW()'), 'on' => 'insert'),
-                        array('date_published', 'safe'),
+            array('date_published', 'safe'),
 		
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -142,7 +142,6 @@ class Page extends CActiveRecord
 		} else {
 			return $this->content;
 		}
-		
 	}
         
     // the page.user_id value needs to be set to the current user's ID when a new page record is created

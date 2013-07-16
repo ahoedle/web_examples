@@ -3,17 +3,15 @@
 /* @var $model LoginForm */
 /* @var $form CActiveForm  */
 
-$this->pageTitle=Yii::app()->name . ' - Login';
-$this->breadcrumbs=array(
-	'Login',
+$this->tabs = array(
+	array('label'=>'Blog', 'url'=>array('/page/index/')),
+	array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+	array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 );
 ?>
 
-<h1>Login</h1>
-
-<p>Please fill out the following form with your login credentials:</p>
-
 <div class="form">
+<!--
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'login-form',
 	'enableClientValidation'=>true,
@@ -25,18 +23,16 @@ $this->breadcrumbs=array(
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username'); ?>
-		<?php echo $form->error($model,'username'); ?>
+		<?php echo $form->labelEx($model,'email'); ?>
+		<?php echo $form->textField($model,'email'); ?>
+		<?php echo $form->error($model,'email'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password'); ?>
 		<?php echo $form->error($model,'password'); ?>
-		<p class="hint">
-			Hint: You may login with <kbd>demo</kbd>/<kbd>demo</kbd> or <kbd>admin</kbd>/<kbd>admin</kbd>.
-		</p>
+
 	</div>
 
 	<div class="row rememberMe">
@@ -50,4 +46,19 @@ $this->breadcrumbs=array(
 	</div>
 
 <?php $this->endWidget(); ?>
+-->
+
+<?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+    'id'=>'verticalForm',
+    'htmlOptions'=>array('class'=>'well'),
+)); ?>
+ 
+<?php echo $form->textFieldRow($model, 'email', array('class'=>'span3')); ?>
+<?php echo $form->passwordFieldRow($model, 'password', array('class'=>'span3')); ?>
+<?php echo $form->checkboxRow($model, 'rememberMe'); ?>
+<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Login')); ?>
+ 
+<?php $this->endWidget(); ?>
+<p class="note">Fields with <span class="required">*</span> are required.</p>
+
 </div><!-- form -->
