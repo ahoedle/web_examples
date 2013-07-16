@@ -29,6 +29,5 @@ $this->menu=array(
 		'place',
 		'description',
 		'visible',
-		'Coursetemplate_template_id',
 	),
 )); ?>

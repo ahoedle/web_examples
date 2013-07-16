@@ -32,7 +32,7 @@ class CourseController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','editableSaver'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -77,6 +77,12 @@ class CourseController extends Controller
 		$this->render('create',array(
 			'model'=>$model,
 		));
+	}
+	
+	public function actionEditableSaver() {
+	    Yii::import('bootstrap.widgets.TbEditableSaver');
+	    $es = new TbEditableSaver('Course');
+	    $es->update();
 	}
 
 	/**
@@ -126,7 +132,7 @@ class CourseController extends Controller
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
-	} 
+	}
 
 	/**
 	 * Manages all models.
@@ -170,4 +176,6 @@ class CourseController extends Controller
 			Yii::app()->end();
 		}
 	}
+	
+
 }

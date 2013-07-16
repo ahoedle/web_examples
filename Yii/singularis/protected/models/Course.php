@@ -12,10 +12,6 @@
  * @property string $place
  * @property string $description
  * @property integer $visible
- * @property integer $Coursetemplate_template_id
- *
- * The followings are the available model relations:
- * @property Coursetemplate $coursetemplateTemplate
  */
 class Course extends CActiveRecord
 {
@@ -45,15 +41,14 @@ class Course extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Coursetemplate_template_id', 'required'),
-			array('visible, Coursetemplate_template_id', 'numerical', 'integerOnly'=>true),
+			array('visible', 'numerical', 'integerOnly'=>true),
 			array('name_full, place', 'length', 'max'=>100),
 			array('name_short', 'length', 'max'=>45),
 			array('description', 'length', 'max'=>500),
 			array('start, end', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('course_id, name_full, name_short, start, end, place, description, visible, Coursetemplate_template_id', 'safe', 'on'=>'search'),
+			array('course_id, name_full, name_short, start, end, place, description, visible', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,7 +60,6 @@ class Course extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'coursetemplateTemplate' => array(self::BELONGS_TO, 'Coursetemplate', 'Coursetemplate_template_id'),
 		);
 	}
 
@@ -83,7 +77,6 @@ class Course extends CActiveRecord
 			'place' => 'Place',
 			'description' => 'Description',
 			'visible' => 'Visible',
-			'Coursetemplate_template_id' => 'Coursetemplate Template',
 		);
 	}
 
@@ -106,7 +99,6 @@ class Course extends CActiveRecord
 		$criteria->compare('place',$this->place,true);
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('visible',$this->visible);
-		$criteria->compare('Coursetemplate_template_id',$this->Coursetemplate_template_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

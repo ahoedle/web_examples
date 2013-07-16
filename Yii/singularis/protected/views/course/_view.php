@@ -38,10 +38,6 @@
 	<?php echo CHtml::encode($data->visible); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Coursetemplate_template_id')); ?>:</b>
-	<?php echo CHtml::encode($data->Coursetemplate_template_id); ?>
-	<br />
-
 	*/ ?>
 
 </div>

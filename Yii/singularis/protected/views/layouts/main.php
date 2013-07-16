@@ -30,28 +30,9 @@
 
 <div id="header">
 
-	<h1>Singularis</h1> </br>
+<!-- 	<h1>Singularis</h1> </br> -->
+<h1></h1>
 
-	<?php
-/*
-	$this->widget('bootstrap.widgets.TbTabs', array(
-		'type'=>'tabs', // 'tabs' or 'pills'
-		'tabs'=>array(
-			array('label'=>'Home', 'content'=>'Home Content', 'active'=>true),
-			array('label'=>'Profile', 'content'=>'Profile Content'),
-			array('label'=>'Messages', 'content'=>'Messages Content'),
-		),
-	));
-*/
-	?>
-
-	<?php
-/*
-	$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
-    	'links'=>array('Library'=>'#', 'Data'),
-	));
-*/
-	?>
 	
 </div>
 
@@ -69,8 +50,8 @@
 						'type'=>'list',
 						'items' => array(
 						    array('label'=>'Kurse', 'itemOptions'=>array('class'=>'nav-header')),
-						    array('label'=>'Verwalten', 'url'=>'Course/Admin', 'itemOptions'=>array('class'=>'active')),
-						    array('label'=>'Library', 'url'=>'#'),
+						    array('label'=>'Verwalten', 'url'=>array('Course/Admin')), //'itemOptions'=>array('class'=>'active')),
+						    array('label'=>'Erstellen', 'url'=>array('Course/Create')),
 						    array('label'=>'Applications', 'url'=>'#'),
 						    
 /*
@@ -84,13 +65,7 @@
 				));
 				?>
 			</div>
-			
-<!--
-			<div class="col3">
 
-			</div>
--->
-			
 		</div>
 	</div>
 </div>

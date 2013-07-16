@@ -57,12 +57,6 @@
 		<?php echo $form->error($model,'visible'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'Coursetemplate_template_id'); ?>
-		<?php echo $form->textField($model,'Coursetemplate_template_id'); ?>
-		<?php echo $form->error($model,'Coursetemplate_template_id'); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
