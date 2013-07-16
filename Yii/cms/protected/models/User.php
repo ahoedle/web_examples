@@ -111,7 +111,7 @@ class User extends CActiveRecord
 			'pass' => 'Password',
 			'type' => 'Type',
 			'date_entered' => 'Date Entered',
-                        'comparePass' => 'Password Confirmation',
+            'comparePass' => 'Password Confirmation',
 		);
 	}
 
@@ -136,5 +136,12 @@ class User extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+	
+	public function afterSave() {
+	    if (!Yii::app()->authManager->isAssigned($this->type, $this->id)) {
+	        Yii::app()->authManager->assign($this->type,$this->id);
+		}
+	    return parent::afterSave();
 	}
 }

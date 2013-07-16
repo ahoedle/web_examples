@@ -47,7 +47,7 @@ class Comment extends CActiveRecord
 			array('comment', 'required'),
 			
 			// must be in related tables:
-			array('user_id, page_id', 'exist'),
+/* 			array('user_id, page_id', 'exist'), */
 			
 			// strip tags from the comments:
 			array('comment', 'filter', 'filter' => 'strip_tags'),

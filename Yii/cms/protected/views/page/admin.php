@@ -2,6 +2,7 @@
 /* @var $this PageController */
 /* @var $model Page */
 
+/*
 $this->breadcrumbs=array(
 	'Pages'=>array('index'),
 	'Manage',
@@ -11,6 +12,9 @@ $this->menu=array(
 	array('label'=>'List Page', 'url'=>array('index')),
 	array('label'=>'Create Page', 'url'=>array('create')),
 );
+*/
+
+$this->tabs = MenuRenderer::renderMainMenu(Yii::app()->user->type, false);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){

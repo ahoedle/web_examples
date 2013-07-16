@@ -18,20 +18,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'user_id'); ?>
-		<?php echo $form->textField($model,'user_id',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'user_id'); ?>
-	</div>
-
-<!--
-	<div class="row">
-		<?php echo $form->labelEx($model,'page_id'); ?>
-		<?php echo $form->textField($model,'page_id',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'page_id'); ?>
-	</div>
--->
-
-	<div class="row">
 		<?php echo '<b>Page:</b> ' . $page_title;?>
 	</div>
 
@@ -40,14 +26,6 @@
 		<?php echo $form->textArea($model,'comment',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'comment'); ?>
 	</div>
-
-<!--
-	<div class="row">
-		<?php echo $form->labelEx($model,'date_entered'); ?>
-		<?php echo $form->textField($model,'date_entered'); ?>
-		<?php echo $form->error($model,'date_entered'); ?>
-	</div>
--->
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

@@ -4,38 +4,23 @@
 ?>
 
 <div class="view">
+	<br/><br/>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
-	<?php echo CHtml::encode($data->id); ?>
-<!-- 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?> -->
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('user_id')); ?>:</b>
-	<?php echo CHtml::encode($data->user->username); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('live')); ?>:</b>
-	<?php echo CHtml::encode($data->live); ?>
-	<br /></br>
-
-<!-- 	<b><?php echo CHtml::encode($data->getAttributeLabel('title')); ?>:</b> -->
-	<b><?php echo CHtml::encode($data->title); ?></b>
-<!-- 	<?php echo CHtml::link(CHtml::encode($data->title), array('view', 'title'=>$data->title)); ?> -->
-<!-- 	<?php echo CHtml::encode($data->title); ?> -->
-	<br /></br>
-
-<!-- 	<b><?php echo CHtml::encode($data->getAttributeLabel('content')); ?>:</b></br> -->
-	<?php echo CHtml::encode($data->getPreview()); ?></br>
-	<?php echo CHtml::link(CHtml::encode('Weiterlesen'), array('view', 'id'=>$data->id)); ?>
-	<br /></br>
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('date_updated')); ?>:</b>
-	<?php echo CHtml::encode($data->date_updated); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('date_published')); ?>:</b>
+	<?php echo '<div id="small_headline">'; ?>
 	<?php echo CHtml::encode($data->date_published); ?>
-	<br />
+	<?php echo '- '; ?>
+	<?php echo CHtml::encode($data->user->username); ?>
+	<?php echo '</div>'; ?>
+	<br/>
+
+	<?php echo '<h1>'; ?>
+	<b><?php echo CHtml::encode($data->title);?></b>
+	<?php echo '</h1>'; ?>
+	<br/>
+	<?php echo $data->getPreview(); ?></br></br>
+	
+	<?php echo CHtml::link(CHtml::encode('...weiterlesen'), array('view', 'id'=>$data->id)); ?>
+	<br /></br>	<br/><br/>
 
 
 </div>
