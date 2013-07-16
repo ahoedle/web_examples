@@ -6,6 +6,50 @@
 
 <div class="form">
 
+
+    <?php /** @var BootActiveForm $form */
+    $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+	    'id'=>'horizontalForm',
+	    'type'=>'horizontal',
+	)); ?>
+	     
+	<fieldset>
+	     
+	    <legend>Kurs anlegen:</legend>
+	     
+	    <?php echo $form->textFieldRow($model, 'name_full');//, array('hint'=>'In addition to freeform text, any HTML5 text-based input appears like so.')); ?>
+	    <?php echo $form->textFieldRow($model, 'name_short'); ?>
+	    
+		<?php echo $form->dateRangeRow($model, 'start',
+				array(
+				//'prepend'=>'<i class="icon-calendar"></i>',
+				'options' => array('callback'=>'js:function(start, end){console.log(start.toString("MMMM d, yyyy") + " - " + end.toString("MMMM d, yyyy"));}') // TODO
+		)); ?>
+		
+<!--
+		 <?php echo $form->select2Row($model, 'place', array('asDropDownList' => false, 'options' => array(
+			'tags' => array('Dornbirn','Hohenems', 'Nenzing'),
+			//'placeholder' => 'type clever, or is, or just type!',
+			'width' => '100%',
+			'tokenSeparators' => array(',', ' ')
+		)));?>
+-->
+		
+		<?php echo $form->textAreaRow($model, 'description', array('class'=>'span8', 'rows'=>5)); ?>
+
+	     
+	</fieldset>
+	     
+    <div class="form-actions">
+    	<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type'=>'primary', 'label'=>'Submit')); ?>
+		<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'reset', 'label'=>'Reset')); ?>
+
+    </div>
+     
+    <?php $this->endWidget(); ?>
+
+
+<!--
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'course-form',
 	'enableAjaxValidation'=>false,
@@ -62,5 +106,6 @@
 	</div>
 
 <?php $this->endWidget(); ?>
+-->
 
 </div><!-- form -->
