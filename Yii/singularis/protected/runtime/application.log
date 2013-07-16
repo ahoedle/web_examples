@@ -38,3 +38,498 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/singularis/index.php/gii
 ---
+2013/07/16 10:54:36 [error] [exception.CException] exception 'CException' with message 'Alias "extensions.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing directory or file.' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/YiiBase.php:341
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/YiiBase.php(196): YiiBase::import('extensions.boot...', true)
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/YiiBase.php(125): CApplication->__construct('/Applications/M...')
+#5 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/Applications/M...')
+#6 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): YiiBase::createWebApplication('/Applications/M...')
+#7 {main}
+REQUEST_URI=/singularis/index.php/site/index
+HTTP_REFERER=http://localhost:8888/singularis/index.php/course/create
+---
+2013/07/16 11:06:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "perfect-3-column-dimensions.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('perfect-3-colum...')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/perfect-3-...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/singularis/index.php/site/perfect-3-column-dimensions.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/site/index
+---
+2013/07/16 11:06:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "perfect-3-column-div-structure.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('perfect-3-colum...')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/perfect-3-...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/singularis/index.php/site/perfect-3-column-div-structure.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/site/index
+---
+2013/07/16 11:06:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "mjt-125x125.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('mjt-125x125.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('mjt-125x125.gif')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/mjt-125x12...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/singularis/index.php/site/mjt-125x125.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/site/index
+---
+2013/07/16 11:06:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfect-3-column-dimensions.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/perfect-3-column-dimensions.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:06:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mjt-125x125.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mjt-125x125.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/mjt-125x125.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:06:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfect-3-column-div-structure.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/perfect-3-column-div-structure.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:06:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfect-3-column-div-structure.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/perfect-3-column-div-structure.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:06:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mjt-125x125.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mjt-125x125.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/mjt-125x125.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:06:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfect-3-column-dimensions.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/perfect-3-column-dimensions.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:07:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfect-3-column-dimensions.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/perfect-3-column-dimensions.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:07:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfect-3-column-div-structure.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/perfect-3-column-div-structure.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:07:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mjt-125x125.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mjt-125x125.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/mjt-125x125.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:07:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfect-3-column-dimensions.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/perfect-3-column-dimensions.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:07:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfect-3-column-div-structure.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/perfect-3-column-div-structure.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:07:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mjt-125x125.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mjt-125x125.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/mjt-125x125.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:08:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfect-3-column-dimensions.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/perfect-3-column-dimensions.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:08:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mjt-125x125.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mjt-125x125.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/mjt-125x125.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:08:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfect-3-column-div-structure.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/perfect-3-column-div-structure.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:08:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfect-3-column-div-structure.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/perfect-3-column-div-structure.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:08:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mjt-125x125.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mjt-125x125.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/mjt-125x125.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:08:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfect-3-column-dimensions.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/perfect-3-column-dimensions.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:09:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfect-3-column-div-structure.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/perfect-3-column-div-structure.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:09:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mjt-125x125.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mjt-125x125.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/mjt-125x125.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:09:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfect-3-column-dimensions.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/perfect-3-column-dimensions.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:09:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfect-3-column-dimensions.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/perfect-3-column-dimensions.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:09:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfect-3-column-div-structure.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/perfect-3-column-div-structure.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:09:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mjt-125x125.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mjt-125x125.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/mjt-125x125.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:10:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfect-3-column-dimensions.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/perfect-3-column-dimensions.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:10:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mjt-125x125.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mjt-125x125.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/mjt-125x125.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:10:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfect-3-column-div-structure.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('perfect-3-colum...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/perfect-3-column-div-structure.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:12:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mjt-125x125.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mjt-125x125.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/mjt-125x125.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:12:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mjt-125x125.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mjt-125x125.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/mjt-125x125.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:13:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mjt-125x125.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mjt-125x125.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/mjt-125x125.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:14:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mjt-125x125.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mjt-125x125.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/mjt-125x125.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:15:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mjt-125x125.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mjt-125x125.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/mjt-125x125.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:16:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mjt-125x125.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mjt-125x125.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/mjt-125x125.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:16:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mjt-125x125.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mjt-125x125.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/singularis/index.php/mjt-125x125.gif
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course
+---
+2013/07/16 11:43:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Course".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('Course')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('Course')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Course/Course/A...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/singularis/index.php/Course/Course/Admin
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course/Admin
+---
+2013/07/16 11:43:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Course".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('Course')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('Course')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Course/Course/A...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/singularis/index.php/Course/Course/Admin
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course/Admin
+---
+2013/07/16 11:43:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Course".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('Course')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('Course')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Course/Course/A...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/singularis/index.php/Course/Course/Admin
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course/Admin
+---
+2013/07/16 11:43:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Course".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('Course')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('Course')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Course/Course/C...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/singularis/index.php/Course/Course/Course/Admin
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course/Course/Admin
+---
+2013/07/16 11:44:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Course".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('Course')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('Course')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Course/Course/C...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/singularis/index.php/Course/Course/Course/Course/Admin
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course/Course/Course/Admin
+---
+2013/07/16 11:44:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Course".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('Course')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('Course')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Course/Course/C...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/singularis/index.php/Course/Course/Course/Course/Course/Admin
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course/Course/Course/Course/Admin
+---
+2013/07/16 11:44:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Course".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('Course')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('Course')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Course/Course/C...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/singularis/index.php/Course/Course/Course/Course/Course/Course/Admin
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course/Course/Course/Course/Course/Admin
+---
+2013/07/16 11:45:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Course".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('Course')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('Course')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Course/Course/A...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/singularis/index.php/Course/Course/Admin
+HTTP_REFERER=http://localhost:8888/singularis/index.php/Course/Admin
+---
+2013/07/16 11:45:54 [error] [php] Undefined variable: gridDataProvider (/Applications/MAMP/htdocs/web_examples/Yii/singularis/protected/views/course/admin.php:40)
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(869): CourseController->renderFile()
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(782): CourseController->renderPartial()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/protected/controllers/CourseController.php(143): CourseController->render()
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionAdmin()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CFilterChain.php(133): CourseController->runAction()
+#6 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CInlineFilter.php(58): CourseController->filterAccessControl()
+#9 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(265): CourseController->runActionWithFilters()
+#12 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CourseController->run()
+#13 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CWebApplication->run()
+REQUEST_URI=/singularis/index.php/Course/Admin
+in /Applications/MAMP/htdocs/web_examples/Yii/singularis/protected/views/course/admin.php (40)
+in /Applications/MAMP/htdocs/web_examples/Yii/singularis/protected/controllers/CourseController.php (143)
+in /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php (13)
+2013/07/16 11:46:37 [error] [php] Undefined variable: gridColumns (/Applications/MAMP/htdocs/web_examples/Yii/singularis/protected/views/course/admin.php:41)
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(869): CourseController->renderFile()
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(782): CourseController->renderPartial()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis/protected/controllers/CourseController.php(143): CourseController->render()
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionAdmin()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CFilterChain.php(133): CourseController->runAction()
+#6 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CInlineFilter.php(58): CourseController->filterAccessControl()
+#9 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(265): CourseController->runActionWithFilters()
+#12 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CourseController->run()
+#13 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CWebApplication->run()
+REQUEST_URI=/singularis/index.php/Course/Admin
+in /Applications/MAMP/htdocs/web_examples/Yii/singularis/protected/views/course/admin.php (41)
+in /Applications/MAMP/htdocs/web_examples/Yii/singularis/protected/controllers/CourseController.php (143)
+in /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php (13)
+2013/07/16 11:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Course".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('Course')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('Course')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/Course/A...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/singularis/index.php/course/Course/Admin
+HTTP_REFERER=http://localhost:8888/singularis/index.php/course/create
+---
