@@ -69,7 +69,20 @@ class CourseController extends Controller
 
 		if(isset($_POST['Course']))
 		{
+		
+			$date = explode('-', $_POST['Course']['start']);
+			$start = $date[0];
+			$end = $date[1];
+/*
+			$end_replaced = str_replace('.', '/', $end);
+			print($end_replaced);
+*/
+			
 			$model->attributes=$_POST['Course'];
+			$model->start = $start;
+			$model->end = $end;
+/* 			print($_POST['Course']['start']); */
+			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->course_id));
 		}

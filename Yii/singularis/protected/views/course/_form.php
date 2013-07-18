@@ -14,26 +14,37 @@
 	)); ?>
 	     
 	<fieldset>
+	     </br>
 	     
-	    <legend>Kurs anlegen:</legend>
+	     <?php
+
+			$url = Yii::app()->request->getPathInfo();	     
 	     
-	    <?php echo $form->textFieldRow($model, 'name_full');//, array('hint'=>'In addition to freeform text, any HTML5 text-based input appears like so.')); ?>
-	    <?php echo $form->textFieldRow($model, 'name_short'); ?>
+	     	if (strpos($url, 'update')) {
+		     	?>
+		     	<h1>Kurs bearbeiten:</h1></br>	
+		     	<?php
+	     	} else {
+		     	?>
+		     	<h1>Kurs erstellen:</h1></br>	
+		     	<?php		     	
+	     	}
+	     ?>
+	     
+<!-- 	    <legend>Kurs anlegen:</legend> -->
+	     
+	    <?php echo $form->textFieldRow($model, 'name_full'); ?> 
+		<?php echo $form->textFieldRow($model, 'name_short'); ?>
 	    
 		<?php echo $form->dateRangeRow($model, 'start',
 				array(
 				//'prepend'=>'<i class="icon-calendar"></i>',
-				'options' => array('callback'=>'js:function(start, end){console.log(start.toString("MMMM d, yyyy") + " - " + end.toString("MMMM d, yyyy"));}') // TODO
+				'options' => array(
+					'callback'=>'js:function(start, end){console.log(start.toString("MMMM d, yyyy") + " / " + end.toString("MMMM d, yyyy"));}',
+					'format' => 'dd.MM.yyyy') // TODO
 		)); ?>
 		
-<!--
-		 <?php echo $form->select2Row($model, 'place', array('asDropDownList' => false, 'options' => array(
-			'tags' => array('Dornbirn','Hohenems', 'Nenzing'),
-			//'placeholder' => 'type clever, or is, or just type!',
-			'width' => '100%',
-			'tokenSeparators' => array(',', ' ')
-		)));?>
--->
+		<?php echo $form->textFieldRow($model, 'place'); ?>
 		
 		<?php echo $form->textAreaRow($model, 'description', array('class'=>'span8', 'rows'=>5)); ?>
 

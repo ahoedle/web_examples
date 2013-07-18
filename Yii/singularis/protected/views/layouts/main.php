@@ -52,7 +52,7 @@
 						    array('label'=>'Kurse', 'itemOptions'=>array('class'=>'nav-header')),
 						    array('label'=>'Verwalten', 'url'=>array('Course/Admin')), //'itemOptions'=>array('class'=>'active')),
 						    array('label'=>'Erstellen', 'url'=>array('Course/Create')),
-						    array('label'=>'Applications', 'url'=>'#'),
+/* 						    array('label'=>'Applications', 'url'=>'#'), */
 						    
 /*
 						    array('label'=>'Another list header', 'itemOptions'=>array('class'=>'nav-header')),

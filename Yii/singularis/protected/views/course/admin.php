@@ -25,20 +25,22 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
+</br>
+<h1>Kurse verwalten</h1>
 
-<h1>Manage Courses</h1>
-
+<!--
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
 or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
 </p>
+-->
 
 
 <?php
 $this->widget('bootstrap.widgets.TbGridView', array(
     'type'=>'striped bordered condensed',
     'dataProvider'=>$model->search(),
-    'template'=>"{items}",
+    'template'=>"{items}\n{pager}",
     'filter'=>$model,
     'columns'=> array(
 		'course_id',
@@ -55,10 +57,58 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 */
 			)
 		),
-		'name_short',
-		'start',
-		'end',
-		'place',
+/* 		'name_short', */
+		array(
+			'class' => 'bootstrap.widgets.TbEditableColumn',
+			'name' => 'name_short',
+			'sortable'=>true,
+			'editable' => array(
+				'url' => $this->createUrl('course/editableSaver'),
+/*
+				'placement' => 'right',
+				'inputclass' => 'span3'
+*/
+			)
+		),
+/* 		'start', */
+		array(
+			'class' => 'bootstrap.widgets.TbEditableColumn',
+			'name' => 'start',
+			'sortable'=>true,
+			'editable' => array(
+				'url' => $this->createUrl('course/editableSaver'),
+/*
+				'placement' => 'right',
+				'inputclass' => 'span3'
+*/
+			)
+		),
+/* 		'end', */
+		array(
+			'class' => 'bootstrap.widgets.TbEditableColumn',
+			'name' => 'end',
+			'sortable'=>true,
+			'editable' => array(
+				'url' => $this->createUrl('course/editableSaver'),
+/*
+				'placement' => 'right',
+				'inputclass' => 'span3'
+*/
+			)
+		),
+/* 		'place', */
+		array(
+			'class' => 'bootstrap.widgets.TbEditableColumn',
+			'name' => 'place',
+			'sortable'=>true,
+			'editable' => array(
+				'url' => $this->createUrl('course/editableSaver'),
+/*
+				'placement' => 'right',
+				'inputclass' => 'span3'
+*/
+			)
+		),
 		/*
 		'description',
 		'visible',
