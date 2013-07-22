@@ -26,7 +26,20 @@ $('.search-form form').submit(function(){
 });
 ");
 */
+<<<<<<< HEAD
+=======
 ?>
+
+
+<?php
+
+$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+    'links'=>array('Kurse'=>'#', 'Verwalten'),
+));
+
+>>>>>>> master
+?>
+
 </br>
 <h1>Kurse verwalten</h1>
 
