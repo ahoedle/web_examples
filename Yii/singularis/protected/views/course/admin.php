@@ -2,6 +2,7 @@
 /* @var $this CourseController */
 /* @var $model Course */
 
+/*
 $this->breadcrumbs=array(
 	'Courses'=>array('index'),
 	'Manage',
@@ -24,6 +25,7 @@ $('.search-form form').submit(function(){
 	return false;
 });
 ");
+*/
 ?>
 </br>
 <h1>Kurse verwalten</h1>

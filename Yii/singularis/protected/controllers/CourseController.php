@@ -36,7 +36,7 @@ class CourseController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete', 'addUserToCourse'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -159,6 +159,16 @@ class CourseController extends Controller
 
 		$this->render('admin',array(
 			'model'=>$model,
+		));
+	}
+	
+	public function actionAddUserToCourse($course_id) {
+	
+		$users = User::model()->findAll();
+	
+		$this->render('addUser',array(
+			'course_id'=>$course_id,
+			'users'=>$users,
 		));
 	}
 
