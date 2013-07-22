@@ -2,32 +2,46 @@
 /* @var $this CourseController */
 /* @var $model Course */
 
-$this->breadcrumbs=array(
-	'Courses'=>array('index'),
-	$model->course_id,
-);
-
-$this->menu=array(
-	array('label'=>'List Course', 'url'=>array('index')),
-	array('label'=>'Create Course', 'url'=>array('create')),
-	array('label'=>'Update Course', 'url'=>array('update', 'id'=>$model->course_id)),
-	array('label'=>'Delete Course', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->course_id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Course', 'url'=>array('admin')),
-);
 ?>
 
-<h1>View Course #<?php echo $model->course_id; ?></h1>
+<h1>Kurs <?php echo $model->course_id; ?></h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
+<?php
+
+$this->widget('bootstrap.widgets.TbDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'course_id',
-		'name_full',
-		'name_short',
-		'start',
-		'end',
-		'place',
-		'description',
-		'visible',
+		array('name'=>'name_full', 'label'=>'Name'),
+		array('name'=>'name_short', 'label'=>'Kürzel'),
+		array('name'=>'start', 'label'=>'Start'),
+		array('name'=>'end', 'label'=>'Ende'),
+		array('name'=>'place', 'label'=>'Ort'),
+		array('name'=>'description', 'label'=>'Beschreibung'),
 	),
-)); ?>
+));
+
+
+$users=new CArrayDataProvider($model->users, array(
+    'keyField'=>'user_id'
+));
+
+
+$this->widget('bootstrap.widgets.TbExtendedGridView', array(
+	'fixedHeader' => true,
+	'headerOffset' => 40, // 40px is the height of the main navigation at bootstrap
+	'type'=>'striped bordered',
+	'dataProvider' => $users,
+	'template' => "{items}",
+    'columns'=> array(
+		'user_id',
+		'username',
+	)
+));
+
+$this->widget('bootstrap.widgets.TbButton',array(
+	'label' => 'Teilnehmer hinzufügen',
+	'size' => 'medium',
+	'url' => '#'
+));
+
+?>

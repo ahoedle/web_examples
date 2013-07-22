@@ -1,27 +1,23 @@
 <?php
 
 /**
- * This is the model class for table "Course".
+ * This is the model class for table "User".
  *
- * The followings are the available columns in table 'Course':
+ * The followings are the available columns in table 'User':
+ * @property integer $user_id
+ * @property string $username
+ * @property string $password
  * @property integer $course_id
- * @property string $name_full
- * @property string $name_short
- * @property string $start
- * @property string $end
- * @property string $place
- * @property string $description
- * @property integer $visible
  *
  * The followings are the available model relations:
- * @property User[] $users
+ * @property Course $course
  */
-class Course extends CActiveRecord
+class User extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Course the static model class
+	 * @return User the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -33,7 +29,7 @@ class Course extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'Course';
+		return 'User';
 	}
 
 	/**
@@ -44,14 +40,13 @@ class Course extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('visible', 'numerical', 'integerOnly'=>true),
-			array('name_full, place', 'length', 'max'=>100),
-			array('name_short', 'length', 'max'=>45),
-			array('description', 'length', 'max'=>500),
-			array('start, end', 'safe'),
+			array('username, password', 'required'),
+			array('course_id', 'numerical', 'integerOnly'=>true),
+			array('username', 'length', 'max'=>100),
+			array('password', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('course_id, name_full, name_short, start, end, place, description, visible', 'safe', 'on'=>'search'),
+			array('user_id, username, password, course_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,7 +58,7 @@ class Course extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'users' => array(self::HAS_MANY, 'User', 'course_id'),
+			'course' => array(self::BELONGS_TO, 'Course', 'course_id'),
 		);
 	}
 
@@ -73,14 +68,10 @@ class Course extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'course_id' => 'Kurs-ID',
-			'name_full' => 'Name',
-			'name_short' => 'Kürzel',
-			'start' => 'Start',
-			'end' => 'Ende',
-			'place' => 'Ort',
-			'description' => 'Beschreibung',
-			'visible' => 'Visible',
+			'user_id' => 'User',
+			'username' => 'Username',
+			'password' => 'Password',
+			'course_id' => 'Course',
 		);
 	}
 
@@ -95,17 +86,14 @@ class Course extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('user_id',$this->user_id);
+		$criteria->compare('username',$this->username,true);
+		$criteria->compare('password',$this->password,true);
 		$criteria->compare('course_id',$this->course_id);
-		$criteria->compare('name_full',$this->name_full,true);
-		$criteria->compare('name_short',$this->name_short,true);
-		$criteria->compare('start',$this->start,true);
-		$criteria->compare('end',$this->end,true);
-		$criteria->compare('place',$this->place,true);
-		$criteria->compare('description',$this->description,true);
-		$criteria->compare('visible',$this->visible);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+	
 }
