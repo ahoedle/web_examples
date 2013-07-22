@@ -2,6 +2,7 @@
 /* @var $this CourseController */
 /* @var $model Course */
 
+/*
 $this->breadcrumbs=array(
 	'Courses'=>array('index'),
 	'Manage',
@@ -24,7 +25,18 @@ $('.search-form form').submit(function(){
 	return false;
 });
 ");
+*/
 ?>
+
+
+<?php
+
+$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+    'links'=>array('Kurse'=>'#', 'Verwalten'),
+));
+
+?>
+
 </br>
 <h1>Kurse verwalten</h1>
 
