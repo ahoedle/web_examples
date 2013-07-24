@@ -51,7 +51,7 @@
 						'items' => array(
 						    array('label'=>'Kurse', 'itemOptions'=>array('class'=>'nav-header')),
 						    array('label'=>'Übersicht', 'url'=>array('Course/Admin')), //'itemOptions'=>array('class'=>'active')),						    
-						    array('label'=>'Verwalten', 'url'=>array('Course/Admin')), //'itemOptions'=>array('class'=>'active')),
+/* 						    array('label'=>'Verwalten', 'url'=>array('Course/Admin')), //'itemOptions'=>array('class'=>'active')), */
 						    array('label'=>'Erstellen', 'url'=>array('Course/Create')),
 /* 						    array('label'=>'Applications', 'url'=>'#'), */
 						    
@@ -65,6 +65,7 @@
 				    )
 				));
 				?>
+<!-- 				<div id="req_res">Test</div> -->
 			</div>
 
 		</div>
