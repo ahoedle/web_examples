@@ -4,119 +4,86 @@
 /* @var $form CActiveForm */
 ?>
 
-<div class="form">
+</br>
 
-
-    <?php /** @var BootActiveForm $form */
-    $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-	    'id'=>'horizontalForm',
-	    'type'=>'horizontal',
-	)); ?>
-	     
-	<fieldset>
-	     </br>
-	     
-	     <?php
-
-			$url = Yii::app()->request->getPathInfo();	     
-	     
-	     	if (strpos($url, 'update')) {
-		     	?>
-		     	<h1>Kurs bearbeiten:</h1></br>	
-		     	<?php
-	     	} else {
-		     	?>
-		     	<h1>Kurs erstellen:</h1></br>	
-		     	<?php		     	
-	     	}
-	     ?>
-	     
-<!-- 	    <legend>Kurs anlegen:</legend> -->
-	     
-	    <?php echo $form->textFieldRow($model, 'name_full'); ?> 
-		<?php echo $form->textFieldRow($model, 'name_short'); ?>
-	    
-		<?php echo $form->dateRangeRow($model, 'start',
-				array(
-				//'prepend'=>'<i class="icon-calendar"></i>',
-				'options' => array(
-					'callback'=>'js:function(start, end){console.log(start.toString("MMMM d, yyyy") + " / " + end.toString("MMMM d, yyyy"));}',
-					'format' => 'dd.MM.yyyy') // TODO
-		)); ?>
-		
-		<?php echo $form->textFieldRow($model, 'place'); ?>
-		
-		<?php echo $form->textAreaRow($model, 'description', array('class'=>'span8', 'rows'=>5)); ?>
-
-	     
-	</fieldset>
-	     
-    <div class="form-actions">
-    	<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type'=>'primary', 'label'=>'Submit')); ?>
-		<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'reset', 'label'=>'Reset')); ?>
-
-    </div>
-     
-    <?php $this->endWidget(); ?>
-
-
-<!--
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'course-form',
-	'enableAjaxValidation'=>false,
+<?php /** @var BootActiveForm $form */
+$form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+	'id'=>'horizontalForm',
+	'type'=>'horizontal',
 )); ?>
+ 
+<fieldset>
+ 
+<!-- <legend>Legend</legend> -->
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+<?php echo $form->textFieldRow($model, 'course_nr'); ?>
 
-	<?php echo $form->errorSummary($model); ?>
+<?php echo $form->dropDownListRow($model, 'center',
+array(' ', 'Dornbirn', 'Hohenems', 'Nenzing')); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'name_full'); ?>
-		<?php echo $form->textField($model,'name_full',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'name_full'); ?>
-	</div>
+<?php echo $form->dropDownListRow($model, 'category1',
+array(' ', 'Aktiv 10+', 'Aktiv 50+', 'Berufliche Weiterbildung', 'Berufskraftfahrer', 'Buchhaltung', 'Büro', 'Computerkurse', 'ECDL', 'ECDL Prüfungen', 'Erwachsenenbildung', 'Intensivunterricht', 'Lehrabschluss', 'Nachhilfe', 'Sprachen')); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'name_short'); ?>
-		<?php echo $form->textField($model,'name_short',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'name_short'); ?>
-	</div>
+<?php echo $form->dropDownListRow($model, 'category2',
+array(' ', 'Aktiv 10+', 'Aktiv 50+', 'Berufliche Weiterbildung', 'Berufskraftfahrer', 'Buchhaltung', 'Büro', 'Computerkurse', 'ECDL', 'ECDL Prüfungen', 'Erwachsenenbildung', 'Intensivunterricht', 'Lehrabschluss', 'Nachhilfe', 'Sprachen')); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'start'); ?>
-		<?php echo $form->textField($model,'start'); ?>
-		<?php echo $form->error($model,'start'); ?>
-	</div>
+<?php echo $form->dropDownListRow($model, 'type',
+array(' ', 'Intensivunterricht', 'Kurs', 'Lehrgang', 'Lernbegleitung', 'Nachhilfe', 'Prüfung', 'Raumvermietung', 'Seminar')); ?>
+ 
+<?php echo $form->textFieldRow($model, 'name_full'); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'end'); ?>
-		<?php echo $form->textField($model,'end'); ?>
-		<?php echo $form->error($model,'end'); ?>
-	</div>
+<?php echo $form->textAreaRow($model, 'requirement', array('class'=>'span8', 'rows'=>5)); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'place'); ?>
-		<?php echo $form->textField($model,'place',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'place'); ?>
-	</div>
+<?php echo $form->textAreaRow($model, 'content', array('class'=>'span8', 'rows'=>5)); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>500)); ?>
-		<?php echo $form->error($model,'description'); ?>
-	</div>
+<?php echo $form->textAreaRow($model, 'description', array('class'=>'span8', 'rows'=>5)); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'visible'); ?>
-		<?php echo $form->textField($model,'visible'); ?>
-		<?php echo $form->error($model,'visible'); ?>
-	</div>
+<?php echo $form->textFieldRow($model, 'place'); ?>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-	</div>
+<?php echo $form->datepickerRow($model, 'start',
+array('prepend'=>'<i class="icon-calendar"></i>')); ?>
 
+<?php echo $form->dropDownListRow($model, 'status',
+array(' ', '------------', 'abgesagt', 'interner Kurs')); ?>
+
+<?php echo $form->datepickerRow($model, 'end',
+array('prepend'=>'<i class="icon-calendar"></i>')); ?>
+
+<?php echo $form->datepickerRow($model, 'expiry',
+array('prepend'=>'<i class="icon-calendar"></i>')); ?>
+
+<?php echo $form->textFieldRow($model, 'duration'); ?>
+
+<?php echo $form->textFieldRow($model, 'ue'); ?>
+
+<?php echo 'Leiter </br>'; ?>
+
+<?php echo 'Trainer </br>'; ?>
+
+<?php echo $form->textFieldRow($model, 'min_participants'); ?>
+
+<?php echo $form->textFieldRow($model, 'max_participants'); ?>
+
+<?php echo $form->textFieldRow($model, 'price'); ?>
+
+<?php echo $form->dropDownListRow($model, 'class_time',
+array(' ', 'A, Abendkurs', 'V, Vormittagskurs', 'N, Nachmittagskurs', 'W, Wochenendkurs', 'T, Tageskurs', 'S, Sonstiges')); ?>
+
+<?php echo $form->dropDownListRow($model, 'graduation',
+array(' ', 'Prüfung', 'Zertifikat', 'Teilnahmebestätigung')); ?>
+
+<?php echo $form->dropDownListRow($model, 'statistics',
+array(' ', 'ja', 'nein', 'neutral')); ?>
+
+<?php echo $form->textFieldRow($model, 'invoice'); ?>
+
+<?php echo $form->textFieldRow($model, 'link'); ?>
+
+</fieldset>
+ 
+<div class="form-actions">
+<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type'=>'primary', 'label'=>'Speichern')); ?>
+<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'reset', 'label'=>'Reset')); ?>
+</div>
+ 
 <?php $this->endWidget(); ?>
--->
-
-</div><!-- form -->

@@ -1,15 +1,13 @@
 <?php
 /* @var $this CourseController */
 /* @var $model Course */
-?>
-
-<?php
 
 $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
-    'links'=>array('Kurse'=>'admin', 'Erstellen'),
+	'links'=>array('Kurse'=>'admin', 'Neuer Kurs'),
 ));
 
-
-echo $this->renderPartial('_form', array('model'=>$model)); 
-
 ?>
+
+<h1>Neuer Kurs erstellen</h1>
+</br>
+<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

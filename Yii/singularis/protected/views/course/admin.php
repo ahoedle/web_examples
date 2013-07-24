@@ -1,70 +1,69 @@
 <?php
 /* @var $this CourseController */
 /* @var $model Course */
-?>
 
-<?php
 $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
-    'links'=>array('Kurse'),
+	'links'=>array('Kurse'),
 ));
+
 ?>
 
 
-</br>
-<h1>Kurse verwalten</h1>
+<h1>Kursübersicht</h1>
+
 
 <?php
-$this->widget('bootstrap.widgets.TbGridView', array(
-    'type'=>'striped bordered condensed',
-    'dataProvider'=>$model->search(),
-    'template'=>"{items}\n{pager}",
-    'filter'=>$model,
-    'columns'=> array(
-		'course_id',
+$this->widget('bootstrap.widgets.TbJsonGridView', array(
+	'dataProvider' => $model->search(),
+	'filter' => $model,
+	'type' => 'striped bordered condensed',
+	'summaryText' => false,
+	'cacheTTL' => 10, // cache will be stored 10 seconds (see cacheTTLType)
+	'cacheTTLType' => 's', // type can be of seconds, minutes or hours
+	'columns' => array(
+/* 		'course_id', */
+		'course_nr',
+		'center',
+/*
+		'category1',
+		'category2',
+		'type',
+*/
+		'name_full',
+/*
+		'requirement',
+		'content',
+		'description',
+		'place',
+*/
+		'start',
+/* 		'status', */
+		'end',
+/*
+		'expiry',
+		'duration',
+		'ue',
+		'min_participants',
+		'max_participants',
+		'price',
+		'class_time',
+		'graduation',
+		'statistics',
+		'invoice',
+		'link',
+*/
+
+/*
 		array(
-			'class' => 'bootstrap.widgets.TbEditableColumn',
-			'name' => 'name_full',
-			'sortable'=>true,
-			'editable' => array(
-				'url' => $this->createUrl('course/editableSaver'),
-			)
+			'name' => 'create_time',
+			'type' => 'datetime'
 		),
+*/
 		array(
-			'class' => 'bootstrap.widgets.TbEditableColumn',
-			'name' => 'name_short',
-			'sortable'=>true,
-			'editable' => array(
-				'url' => $this->createUrl('course/editableSaver'),
-			)
-		),
-		array(
-			'class' => 'bootstrap.widgets.TbEditableColumn',
-			'name' => 'start',
-			'sortable'=>true,
-			'editable' => array(
-				'url' => $this->createUrl('course/editableSaver'),
-			)
-		),
-		array(
-			'class' => 'bootstrap.widgets.TbEditableColumn',
-			'name' => 'end',
-			'sortable'=>true,
-			'editable' => array(
-				'url' => $this->createUrl('course/editableSaver'),
-			)
-		),
-		array(
-			'class' => 'bootstrap.widgets.TbEditableColumn',
-			'name' => 'place',
-			'sortable'=>true,
-			'editable' => array(
-				'url' => $this->createUrl('course/editableSaver'),
-			)
-		),
-		array(
-			'class'=>'CButtonColumn',
+			'header' => Yii::t('ses', 'Edit'),
+			'class' => 'bootstrap.widgets.TbJsonButtonColumn',
+			'template' => '{view} {delete}',
 		),
 	),
 ));
 ?>
-

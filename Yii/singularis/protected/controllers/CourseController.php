@@ -32,11 +32,11 @@ class CourseController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','editableSaver'),
+				'actions'=>array('create','update'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete', 'addUserToCourse', 'ajaxupdate', 'reqTest01'),
+				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -51,9 +51,27 @@ class CourseController extends Controller
 	 */
 	public function actionView($id)
 	{
+/*
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
+*/
+		$model=$this->loadModel($id);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Course']))
+		{
+			$model->attributes=$_POST['Course'];
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->course_id));
+		}
+
+		$this->render('update',array(
+			'model'=>$model,
+		));
+
 	}
 
 	/**
@@ -69,20 +87,7 @@ class CourseController extends Controller
 
 		if(isset($_POST['Course']))
 		{
-		
-			$date = explode('-', $_POST['Course']['start']);
-			$start = $date[0];
-			$end = $date[1];
-/*
-			$end_replaced = str_replace('.', '/', $end);
-			print($end_replaced);
-*/
-			
 			$model->attributes=$_POST['Course'];
-			$model->start = $start;
-			$model->end = $end;
-/* 			print($_POST['Course']['start']); */
-			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->course_id));
 		}
@@ -90,12 +95,6 @@ class CourseController extends Controller
 		$this->render('create',array(
 			'model'=>$model,
 		));
-	}
-	
-	public function actionEditableSaver() {
-	    Yii::import('bootstrap.widgets.TbEditableSaver');
-	    $es = new TbEditableSaver('Course');
-	    $es->update();
 	}
 
 	/**
@@ -161,20 +160,6 @@ class CourseController extends Controller
 			'model'=>$model,
 		));
 	}
-	
-	public function actionAddUserToCourse($course_id) {
-	
-		$users = User::model()->findAll();
-	
-		$this->render('addUser',array(
-			'course_id'=>$course_id,
-			'model'=>$users,
-		));
-	}
-	
-	public function setCourseForUser() {
-		
-	}
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
@@ -203,27 +188,4 @@ class CourseController extends Controller
 			Yii::app()->end();
 		}
 	}
-	
-	public function actionAjaxupdate() {
-
-        $autoIdAll = $_POST['autoId'];
-        $course_id = $_GET['course_id'];
-
-        if(count($autoIdAll) > 0) {
-
-            foreach($autoIdAll as $autoId) {
-                $model = User::model()->findByPk($autoId);
-                $model->course_id = $course_id;
-                $model->save();
-                
-                $course = Course::model()->find('course_id=:course_id', array(':course_id'=>$course_id));
-
-            }
-            $this->render('view',array('model'=>$course));
-
-        }                    
-
-	}
-
-
 }
