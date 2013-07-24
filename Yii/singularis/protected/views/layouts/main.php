@@ -54,7 +54,17 @@
 /* 						    array('label'=>'Verwalten', 'url'=>array('Course/Admin')), //'itemOptions'=>array('class'=>'active')), */
 						    array('label'=>'Erstellen', 'url'=>array('Course/Create')),
 /* 						    array('label'=>'Applications', 'url'=>'#'), */
-						    
+
+						    array('label'=>'Trainer', 'itemOptions'=>array('class'=>'nav-header')),
+						    array('label'=>'Übersicht', 'url'=>array('Trainer/Admin')), //'itemOptions'=>array('class'=>'active')),						    
+/* 						    array('label'=>'Verwalten', 'url'=>array('Course/Admin')), //'itemOptions'=>array('class'=>'active')), */
+						    array('label'=>'Erstellen', 'url'=>array('Trainer/Create')),
+
+						    array('label'=>'Kunden', 'itemOptions'=>array('class'=>'nav-header')),
+						    array('label'=>'Übersicht', 'url'=>array('User/Admin')), //'itemOptions'=>array('class'=>'active')),						    
+/* 						    array('label'=>'Verwalten', 'url'=>array('Course/Admin')), //'itemOptions'=>array('class'=>'active')), */
+						    array('label'=>'Erstellen', 'url'=>array('User/Create')),
+
 /*
 						    array('label'=>'Another list header', 'itemOptions'=>array('class'=>'nav-header')),
 						    array('label'=>'Profile', 'url'=>'#'),

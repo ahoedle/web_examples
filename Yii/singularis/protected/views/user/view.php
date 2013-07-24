@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Users'=>array('index'),
-	$model->user_id,
+	$model->title,
 );
 
 $this->menu=array(
@@ -22,8 +22,28 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'user_id',
-		'username',
 		'password',
 		'course_id',
+		'salutation',
+		'title',
+		'first_name',
+		'last_name',
+		'address',
+		'postcode',
+		'place',
+		'tel',
+		'mobile',
+		'email',
+		'newsletter',
+		'educational_partner',
+		'info',
+		'recorded_by',
+		'birthday',
+		'status',
+		'social_security_nr',
+		'advisor1',
+		'advisor2',
+		'advisor_email',
+		'ams_district',
 	),
 )); ?>

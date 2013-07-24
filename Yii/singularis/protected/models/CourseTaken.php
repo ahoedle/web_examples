@@ -1,20 +1,22 @@
 <?php
 
 /**
- * This is the model class for table "Coursetemplate".
+ * This is the model class for table "course_taken".
  *
- * The followings are the available columns in table 'Coursetemplate':
- * @property integer $template_id
- * @property string $name_full
- * @property string $name_short
- * @property string $description
+ * The followings are the available columns in table 'course_taken':
+ * @property integer $course_id
+ * @property integer $user_id
+ *
+ * The followings are the available model relations:
+ * @property User $user
+ * @property Course $course
  */
-class Coursetemplate extends CActiveRecord
+class CourseTaken extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Coursetemplate the static model class
+	 * @return CourseTaken the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -26,7 +28,7 @@ class Coursetemplate extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'Coursetemplate';
+		return 'course_taken';
 	}
 
 	/**
@@ -37,12 +39,11 @@ class Coursetemplate extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name_full', 'length', 'max'=>100),
-			array('name_short', 'length', 'max'=>45),
-			array('description', 'length', 'max'=>500),
+			array('course_id, user_id', 'required'),
+			array('course_id, user_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('template_id, name_full, name_short, description', 'safe', 'on'=>'search'),
+			array('course_id, user_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,6 +55,8 @@ class Coursetemplate extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'user' => array(self::BELONGS_TO, 'User', 'user_id'),
+			'course' => array(self::BELONGS_TO, 'Course', 'course_id'),
 		);
 	}
 
@@ -63,10 +66,8 @@ class Coursetemplate extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'template_id' => 'Template',
-			'name_full' => 'Name Full',
-			'name_short' => 'Name Short',
-			'description' => 'Description',
+			'course_id' => 'Course',
+			'user_id' => 'User',
 		);
 	}
 
@@ -81,10 +82,8 @@ class Coursetemplate extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('template_id',$this->template_id);
-		$criteria->compare('name_full',$this->name_full,true);
-		$criteria->compare('name_short',$this->name_short,true);
-		$criteria->compare('description',$this->description,true);
+		$criteria->compare('course_id',$this->course_id);
+		$criteria->compare('user_id',$this->user_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

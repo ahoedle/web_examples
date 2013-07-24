@@ -156,9 +156,7 @@ class CourseController extends Controller
 		if(isset($_GET['Course']))
 			$model->attributes=$_GET['Course'];
 
-		$this->render('admin',array(
-			'model'=>$model,
-		));
+		$this->render('admin',array('model'=>$model));
 	}
 
 	/**

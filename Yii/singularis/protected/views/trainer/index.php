@@ -1,18 +1,18 @@
 <?php
-/* @var $this CoursetemplateController */
+/* @var $this TrainerController */
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Coursetemplates',
+	'Trainers',
 );
 
 $this->menu=array(
-	array('label'=>'Create Coursetemplate', 'url'=>array('create')),
-	array('label'=>'Manage Coursetemplate', 'url'=>array('admin')),
+	array('label'=>'Create Trainer', 'url'=>array('create')),
+	array('label'=>'Manage Trainer', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Coursetemplates</h1>
+<h1>Trainers</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

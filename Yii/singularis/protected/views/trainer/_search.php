@@ -1,6 +1,6 @@
 <?php
-/* @var $this UserController */
-/* @var $model User */
+/* @var $this TrainerController */
+/* @var $model Trainer */
 /* @var $form CActiveForm */
 ?>
 
@@ -12,13 +12,8 @@
 )); ?>
 
 	<div class="row">
-		<?php echo $form->label($model,'user_id'); ?>
-		<?php echo $form->textField($model,'user_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'course_id'); ?>
-		<?php echo $form->textField($model,'course_id'); ?>
+		<?php echo $form->label($model,'trainer_id'); ?>
+		<?php echo $form->textField($model,'trainer_id'); ?>
 	</div>
 
 	<div class="row">
@@ -77,11 +72,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'educational_partner'); ?>
-		<?php echo $form->textField($model,'educational_partner',array('size'=>60,'maxlength'=>100)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'info'); ?>
 		<?php echo $form->textField($model,'info',array('size'=>60,'maxlength'=>1000)); ?>
 	</div>
@@ -107,23 +97,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'advisor1'); ?>
-		<?php echo $form->textField($model,'advisor1',array('size'=>60,'maxlength'=>100)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'advisor2'); ?>
-		<?php echo $form->textField($model,'advisor2',array('size'=>60,'maxlength'=>100)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'advisor_email'); ?>
-		<?php echo $form->textField($model,'advisor_email',array('size'=>60,'maxlength'=>100)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'ams_district'); ?>
-		<?php echo $form->textField($model,'ams_district',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->label($model,'subjects'); ?>
+		<?php echo $form->textField($model,'subjects',array('size'=>60,'maxlength'=>100)); ?>
 	</div>
 
 	<div class="row buttons">

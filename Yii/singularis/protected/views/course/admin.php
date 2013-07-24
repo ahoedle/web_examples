@@ -13,13 +13,13 @@ $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 
 
 <?php
-$this->widget('bootstrap.widgets.TbJsonGridView', array(
+
+
+
+$this->widget('bootstrap.widgets.TbGridView', array(
+	'type'=>'striped bordered condensed',
 	'dataProvider' => $model->search(),
 	'filter' => $model,
-	'type' => 'striped bordered condensed',
-	'summaryText' => false,
-	'cacheTTL' => 10, // cache will be stored 10 seconds (see cacheTTLType)
-	'cacheTTLType' => 's', // type can be of seconds, minutes or hours
 	'columns' => array(
 /* 		'course_id', */
 		'course_nr',
@@ -59,11 +59,13 @@ $this->widget('bootstrap.widgets.TbJsonGridView', array(
 			'type' => 'datetime'
 		),
 */
+/*
 		array(
 			'header' => Yii::t('ses', 'Edit'),
 			'class' => 'bootstrap.widgets.TbJsonButtonColumn',
 			'template' => '{view} {delete}',
 		),
+*/
 	),
 ));
 ?>

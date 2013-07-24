@@ -30,9 +30,15 @@
  * @property string $statistics
  * @property string $invoice
  * @property string $link
+ * @property integer $lead_trainer
+ * @property string $trainer
  *
  * The followings are the available model relations:
+ * @property Course $leadTrainer
+ * @property Course[] $courses
  * @property User[] $users
+ * @property CourseGiven[] $courseGivens
+ * @property CourseTaken[] $courseTakens
  */
 class Course extends CActiveRecord
 {
@@ -62,15 +68,15 @@ class Course extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('visible, min_participants, max_participants, price', 'numerical', 'integerOnly'=>true),
-			array('name_full, place, category1, category2, type, status, expiry, duration, ue, class_time, graduation, statistics, invoice, link', 'length', 'max'=>100),
+			array('visible, min_participants, max_participants, price, price, lead_trainer', 'numerical', 'integerOnly'=>true),
+			array('name_full, place, category1, category2, type, status, expiry, duration, ue, class_time, graduation, statistics, invoice, link, trainer', 'length', 'max'=>100),
 			array('start, end, course_nr', 'length', 'max'=>20),
 			array('description', 'length', 'max'=>500),
 			array('requirement, content', 'length', 'max'=>1000),
 			array('center', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('course_id, name_full, start, end, place, description, visible, course_nr, category1, category2, type, requirement, content, center, status, expiry, duration, ue, min_participants, max_participants, price, class_time, graduation, statistics, invoice, link', 'safe', 'on'=>'search'),
+			array('course_id, name_full, start, end, place, description, visible, course_nr, category1, category2, type, requirement, content, center, status, expiry, duration, ue, min_participants, max_participants, price, class_time, graduation, statistics, invoice, link, lead_trainer, trainer', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -82,7 +88,11 @@ class Course extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'leadTrainer' => array(self::BELONGS_TO, 'Course', 'lead_trainer'),
+			'courses' => array(self::HAS_MANY, 'Course', 'lead_trainer'),
 			'users' => array(self::HAS_MANY, 'User', 'course_id'),
+			'courseGivens' => array(self::HAS_MANY, 'CourseGiven', 'course_id'),
+			'courseTakens' => array(self::HAS_MANY, 'CourseTaken', 'course_id'),
 		);
 	}
 
@@ -118,6 +128,8 @@ class Course extends CActiveRecord
 			'statistics' => 'Erwachsenenbildung - Statistik',
 			'invoice' => 'Rechnungsfreigabe durch',
 			'link' => 'Weiterer Link',
+			'lead_trainer' => 'Haupttrainer',
+			'trainer' => 'Trainer',
 		);
 	}
 
@@ -158,6 +170,8 @@ class Course extends CActiveRecord
 		$criteria->compare('statistics',$this->statistics,true);
 		$criteria->compare('invoice',$this->invoice,true);
 		$criteria->compare('link',$this->link,true);
+		$criteria->compare('lead_trainer',$this->lead_trainer);
+		$criteria->compare('trainer',$this->trainer,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

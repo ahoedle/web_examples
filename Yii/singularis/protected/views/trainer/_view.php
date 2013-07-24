@@ -1,20 +1,16 @@
 <?php
-/* @var $this UserController */
-/* @var $data User */
+/* @var $this TrainerController */
+/* @var $data Trainer */
 ?>
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('user_id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->user_id), array('view', 'id'=>$data->user_id)); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('trainer_id')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->trainer_id), array('view', 'id'=>$data->trainer_id)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
 	<?php echo CHtml::encode($data->password); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('course_id')); ?>:</b>
-	<?php echo CHtml::encode($data->course_id); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('salutation')); ?>:</b>
@@ -33,11 +29,11 @@
 	<?php echo CHtml::encode($data->last_name); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('address')); ?>:</b>
 	<?php echo CHtml::encode($data->address); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('postcode')); ?>:</b>
 	<?php echo CHtml::encode($data->postcode); ?>
 	<br />
@@ -62,10 +58,6 @@
 	<?php echo CHtml::encode($data->newsletter); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('educational_partner')); ?>:</b>
-	<?php echo CHtml::encode($data->educational_partner); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('info')); ?>:</b>
 	<?php echo CHtml::encode($data->info); ?>
 	<br />
@@ -86,20 +78,8 @@
 	<?php echo CHtml::encode($data->social_security_nr); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('advisor1')); ?>:</b>
-	<?php echo CHtml::encode($data->advisor1); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('advisor2')); ?>:</b>
-	<?php echo CHtml::encode($data->advisor2); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('advisor_email')); ?>:</b>
-	<?php echo CHtml::encode($data->advisor_email); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('ams_district')); ?>:</b>
-	<?php echo CHtml::encode($data->ams_district); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('subjects')); ?>:</b>
+	<?php echo CHtml::encode($data->subjects); ?>
 	<br />
 
 	*/ ?>

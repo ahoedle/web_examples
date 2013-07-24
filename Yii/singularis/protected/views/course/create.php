@@ -8,6 +8,6 @@ $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 
 ?>
 
-<h1>Neuer Kurs erstellen</h1>
+<h1>Neuer Kurs anlegen</h1>
 </br>
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

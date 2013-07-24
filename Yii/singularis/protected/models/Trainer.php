@@ -1,12 +1,11 @@
 <?php
 
 /**
- * This is the model class for table "User".
+ * This is the model class for table "Trainer".
  *
- * The followings are the available columns in table 'User':
- * @property integer $user_id
+ * The followings are the available columns in table 'Trainer':
+ * @property integer $trainer_id
  * @property string $password
- * @property integer $course_id
  * @property string $salutation
  * @property string $title
  * @property string $first_name
@@ -18,28 +17,22 @@
  * @property string $mobile
  * @property string $email
  * @property string $newsletter
- * @property string $educational_partner
  * @property string $info
  * @property string $recorded_by
  * @property string $birthday
  * @property string $status
  * @property string $social_security_nr
- * @property string $advisor1
- * @property string $advisor2
- * @property string $advisor_email
- * @property string $ams_district
+ * @property string $subjects
  *
  * The followings are the available model relations:
- * @property Course $course
- * @property CourseTaken[] $courseTakens
- * @property InvoiceAddress[] $invoiceAddresses
+ * @property CourseGiven[] $courseGivens
  */
-class User extends CActiveRecord
+class Trainer extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return User the static model class
+	 * @return Trainer the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -51,7 +44,7 @@ class User extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'User';
+		return 'Trainer';
 	}
 
 	/**
@@ -63,14 +56,13 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('password', 'required'),
-			array('course_id', 'numerical', 'integerOnly'=>true),
 			array('password', 'length', 'max'=>45),
-			array('salutation, title, first_name, last_name, address, postcode, place, tel, mobile, email, educational_partner, recorded_by, birthday, status, social_security_nr, advisor1, advisor2, advisor_email, ams_district', 'length', 'max'=>100),
+			array('salutation, title, first_name, last_name, address, postcode, place, tel, mobile, email, recorded_by, birthday, status, social_security_nr, subjects', 'length', 'max'=>100),
 			array('newsletter', 'length', 'max'=>10),
 			array('info', 'length', 'max'=>1000),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('user_id, password, course_id, salutation, title, first_name, last_name, address, postcode, place, tel, mobile, email, newsletter, educational_partner, info, recorded_by, birthday, status, social_security_nr, advisor1, advisor2, advisor_email, ams_district', 'safe', 'on'=>'search'),
+			array('trainer_id, password, salutation, title, first_name, last_name, address, postcode, place, tel, mobile, email, newsletter, info, recorded_by, birthday, status, social_security_nr, subjects', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -82,9 +74,7 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'course' => array(self::BELONGS_TO, 'Course', 'course_id'),
-			'courseTakens' => array(self::HAS_MANY, 'CourseTaken', 'user_id'),
-			'invoiceAddresses' => array(self::HAS_MANY, 'InvoiceAddress', 'user_id'),
+			'courseGivens' => array(self::HAS_MANY, 'CourseGiven', 'trainer_id'),
 		);
 	}
 
@@ -94,9 +84,8 @@ class User extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'user_id' => 'ID',
+			'trainer_id' => 'ID',
 			'password' => 'Passwort',
-			'course_id' => 'Kurs ID',
 			'salutation' => 'Anrede',
 			'title' => 'Titel',
 			'first_name' => 'Vorname',
@@ -108,16 +97,12 @@ class User extends CActiveRecord
 			'mobile' => 'Mobil',
 			'email' => 'E-mail',
 			'newsletter' => 'Newsletter',
-			'educational_partner' => 'Bildungspartner',
 			'info' => 'Info',
 			'recorded_by' => 'Erfasst von',
 			'birthday' => 'Geburtstag',
 			'status' => 'Status',
 			'social_security_nr' => 'Sozialversicherungsnummer',
-			'advisor1' => 'ASM/FAB Berater',
-			'advisor2' => 'Berater (alt)',
-			'advisor_email' => 'Berater E-mail',
-			'ams_district' => 'Ams Bezirk',
+			'subjects' => 'Fächer',
 		);
 	}
 
@@ -132,9 +117,8 @@ class User extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('user_id',$this->user_id);
+		$criteria->compare('trainer_id',$this->trainer_id);
 		$criteria->compare('password',$this->password,true);
-		$criteria->compare('course_id',$this->course_id);
 		$criteria->compare('salutation',$this->salutation,true);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('first_name',$this->first_name,true);
@@ -146,16 +130,12 @@ class User extends CActiveRecord
 		$criteria->compare('mobile',$this->mobile,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('newsletter',$this->newsletter,true);
-		$criteria->compare('educational_partner',$this->educational_partner,true);
 		$criteria->compare('info',$this->info,true);
 		$criteria->compare('recorded_by',$this->recorded_by,true);
 		$criteria->compare('birthday',$this->birthday,true);
 		$criteria->compare('status',$this->status,true);
 		$criteria->compare('social_security_nr',$this->social_security_nr,true);
-		$criteria->compare('advisor1',$this->advisor1,true);
-		$criteria->compare('advisor2',$this->advisor2,true);
-		$criteria->compare('advisor_email',$this->advisor_email,true);
-		$criteria->compare('ams_district',$this->ams_district,true);
+		$criteria->compare('subjects',$this->subjects,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
