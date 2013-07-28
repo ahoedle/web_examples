@@ -36,7 +36,7 @@ class CourseController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete', 'addUserToCourse'),
+				'actions'=>array('admin','delete', 'addUserToCourse', 'ajaxupdate', 'reqTest01'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -168,8 +168,12 @@ class CourseController extends Controller
 	
 		$this->render('addUser',array(
 			'course_id'=>$course_id,
-			'users'=>$users,
+			'model'=>$users,
 		));
+	}
+	
+	public function setCourseForUser() {
+		
 	}
 
 	/**
@@ -200,5 +204,26 @@ class CourseController extends Controller
 		}
 	}
 	
+	public function actionAjaxupdate() {
+
+        $autoIdAll = $_POST['autoId'];
+        $course_id = $_GET['course_id'];
+
+        if(count($autoIdAll) > 0) {
+
+            foreach($autoIdAll as $autoId) {
+                $model = User::model()->findByPk($autoId);
+                $model->course_id = $course_id;
+                $model->save();
+                
+                $course = Course::model()->find('course_id=:course_id', array(':course_id'=>$course_id));
+
+            }
+            $this->render('view',array('model'=>$course));
+
+        }                    
+
+	}
+
 
 }
