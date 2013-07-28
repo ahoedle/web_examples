@@ -1,0 +1,26 @@
+2013/07/27 22:34:58 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:1132
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('getQuote')
+#5 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Quote/getQuote')
+#6 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#7 /Applications/MAMP/htdocs/web_examples/Yii/quotes/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/Yii/quotes/index.php/Quote/getQuote
+---
+2013/07/27 22:35:15 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:1132
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('getQuote')
+#5 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Quote/getQuote')
+#6 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#7 /Applications/MAMP/htdocs/web_examples/Yii/quotes/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/Yii/quotes/index.php/Quote/getQuote
+---
