@@ -17,9 +17,18 @@ $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 
 
 $this->widget('bootstrap.widgets.TbGridView', array(
+/*
 	'type'=>'striped bordered condensed',
 	'dataProvider' => $model->search(),
 	'filter' => $model,
+	'template'=>"{items}\n{pager}",
+*/
+	
+	'type'=>'striped bordered condensed',
+	'dataProvider'=>$model->search(),
+	'template'=>"{items}",
+	'filter'=>$model,
+/* 	'columns'=>$gridColumns, */
 	'columns' => array(
 /* 		'course_id', */
 		'course_nr',
