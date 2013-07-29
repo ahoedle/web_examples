@@ -1,7 +1,7 @@
 <?php
 /* @var $this CourseController */
 /* @var $model Course */
-<<<<<<< HEAD
+
 
 /*
 $this->breadcrumbs=array(
@@ -28,8 +28,7 @@ $('.search-form form').submit(function(){
 ");
 */
 ?>
-=======
-?>
+
 
 <?php
 $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
@@ -37,8 +36,6 @@ $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 ));
 ?>
 
-
->>>>>>> 31e821c3fe3d70b0c822fcec585f1eca6f9f2d92
 </br>
 <h1>Kurse verwalten</h1>
 
