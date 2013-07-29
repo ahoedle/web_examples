@@ -1,0 +1,18 @@
+2013/07/29 16:49:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/gii/GiiModule.php:168
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/gii
+---
+2013/07/29 16:53:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Course/Create".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Course/Create')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/Course/Create
+---
