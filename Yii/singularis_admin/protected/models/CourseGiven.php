@@ -1,15 +1,17 @@
 <?php
 
 /**
- * This is the model class for table "course_given".
+ * This is the model class for table "sing_course_given".
  *
- * The followings are the available columns in table 'course_given':
+ * The followings are the available columns in table 'sing_course_given':
  * @property integer $trainer_id
  * @property integer $course_id
+ * @property string $is_lead_trainer
  *
  * The followings are the available model relations:
- * @property Trainer $trainer
- * @property Course $course
+ * @property SingCourse[] $singCourses
+ * @property SingTrainer $trainer
+ * @property SingCourse $course
  */
 class CourseGiven extends CActiveRecord
 {
@@ -28,7 +30,7 @@ class CourseGiven extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'course_given';
+		return 'sing_course_given';
 	}
 
 	/**
@@ -41,9 +43,10 @@ class CourseGiven extends CActiveRecord
 		return array(
 			array('trainer_id, course_id', 'required'),
 			array('trainer_id, course_id', 'numerical', 'integerOnly'=>true),
+			array('is_lead_trainer', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('trainer_id, course_id', 'safe', 'on'=>'search'),
+			array('trainer_id, course_id, is_lead_trainer', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,8 +58,9 @@ class CourseGiven extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'trainer' => array(self::BELONGS_TO, 'Trainer', 'trainer_id'),
-			'course' => array(self::BELONGS_TO, 'Course', 'course_id'),
+			'singCourses' => array(self::HAS_MANY, 'SingCourse', 'trainer'),
+			'trainer' => array(self::BELONGS_TO, 'SingTrainer', 'trainer_id'),
+			'course' => array(self::BELONGS_TO, 'SingCourse', 'course_id'),
 		);
 	}
 
@@ -68,6 +72,7 @@ class CourseGiven extends CActiveRecord
 		return array(
 			'trainer_id' => 'Trainer',
 			'course_id' => 'Course',
+			'is_lead_trainer' => 'Is Lead Trainer',
 		);
 	}
 
@@ -84,6 +89,7 @@ class CourseGiven extends CActiveRecord
 
 		$criteria->compare('trainer_id',$this->trainer_id);
 		$criteria->compare('course_id',$this->course_id);
+		$criteria->compare('is_lead_trainer',$this->is_lead_trainer,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

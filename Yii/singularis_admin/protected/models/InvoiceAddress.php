@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "invoice_address".
+ * This is the model class for table "sing_invoice_address".
  *
- * The followings are the available columns in table 'invoice_address':
+ * The followings are the available columns in table 'sing_invoice_address':
  * @property integer $address_id
  * @property string $name
  * @property string $nr
@@ -18,7 +18,7 @@
  * @property integer $user_id
  *
  * The followings are the available model relations:
- * @property User $user
+ * @property SingUser $user
  */
 class InvoiceAddress extends CActiveRecord
 {
@@ -37,7 +37,7 @@ class InvoiceAddress extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'invoice_address';
+		return 'sing_invoice_address';
 	}
 
 	/**
@@ -64,7 +64,7 @@ class InvoiceAddress extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'user' => array(self::BELONGS_TO, 'User', 'user_id'),
+			'user' => array(self::BELONGS_TO, 'SingUser', 'user_id'),
 		);
 	}
 

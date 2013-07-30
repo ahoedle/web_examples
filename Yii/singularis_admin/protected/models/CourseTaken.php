@@ -1,15 +1,15 @@
 <?php
 
 /**
- * This is the model class for table "course_taken".
+ * This is the model class for table "sing_course_taken".
  *
- * The followings are the available columns in table 'course_taken':
+ * The followings are the available columns in table 'sing_course_taken':
  * @property integer $course_id
  * @property integer $user_id
  *
  * The followings are the available model relations:
- * @property Course $course
- * @property User $user
+ * @property SingCourse $course
+ * @property SingUser $user
  */
 class CourseTaken extends CActiveRecord
 {
@@ -28,7 +28,7 @@ class CourseTaken extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'course_taken';
+		return 'sing_course_taken';
 	}
 
 	/**
@@ -55,8 +55,8 @@ class CourseTaken extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'course' => array(self::BELONGS_TO, 'Course', 'course_id'),
-			'user' => array(self::BELONGS_TO, 'User', 'user_id'),
+			'course' => array(self::BELONGS_TO, 'SingCourse', 'course_id'),
+			'user' => array(self::BELONGS_TO, 'SingUser', 'user_id'),
 		);
 	}
 

@@ -16,9 +16,9 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'password'); ?>
+		<?php echo $form->labelEx($model,'internal_nr'); ?>
+		<?php echo $form->textField($model,'internal_nr',array('size'=>30,'maxlength'=>30)); ?>
+		<?php echo $form->error($model,'internal_nr'); ?>
 	</div>
 
 	<div class="row">

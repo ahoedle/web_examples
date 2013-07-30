@@ -22,7 +22,7 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'user_id',
-		'password',
+		'internal_nr',
 		'course_id',
 		'salutation',
 		'title',

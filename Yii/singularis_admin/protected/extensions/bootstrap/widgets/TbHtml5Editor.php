@@ -21,7 +21,7 @@ class TbHtml5Editor extends CInputWidget
 	 * Editor language
 	 * Supports: de-DE, es-ES, fr-FR, pt-BR, sv-SE, it-IT
 	 */
-	public $lang = 'en';
+	public $lang = 'de-DE';
 
 	/**
 	 * Html options that will be assigned to the text area

@@ -1,11 +1,11 @@
 <?php
 
 /**
- * This is the model class for table "User".
+ * This is the model class for table "sing_user".
  *
- * The followings are the available columns in table 'User':
+ * The followings are the available columns in table 'sing_user':
  * @property integer $user_id
- * @property string $password
+ * @property string $internal_nr
  * @property integer $course_id
  * @property string $salutation
  * @property string $title
@@ -30,9 +30,9 @@
  * @property string $ams_district
  *
  * The followings are the available model relations:
- * @property Course $course
- * @property CourseTaken[] $courseTakens
- * @property InvoiceAddress[] $invoiceAddresses
+ * @property SingCourseTaken[] $singCourseTakens
+ * @property SingInvoiceAddress[] $singInvoiceAddresses
+ * @property SingCourse $course
  */
 class User extends CActiveRecord
 {
@@ -51,7 +51,7 @@ class User extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'User';
+		return 'sing_user';
 	}
 
 	/**
@@ -62,15 +62,14 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('password', 'required'),
 			array('course_id', 'numerical', 'integerOnly'=>true),
-			array('password', 'length', 'max'=>45),
+			array('internal_nr', 'length', 'max'=>30),
 			array('salutation, title, first_name, last_name, address, postcode, place, tel, mobile, email, educational_partner, recorded_by, birthday, status, social_security_nr, advisor1, advisor2, advisor_email, ams_district', 'length', 'max'=>100),
 			array('newsletter', 'length', 'max'=>10),
 			array('info', 'length', 'max'=>1000),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('user_id, password, course_id, salutation, title, first_name, last_name, address, postcode, place, tel, mobile, email, newsletter, educational_partner, info, recorded_by, birthday, status, social_security_nr, advisor1, advisor2, advisor_email, ams_district', 'safe', 'on'=>'search'),
+			array('user_id, internal_nr, course_id, salutation, title, first_name, last_name, address, postcode, place, tel, mobile, email, newsletter, educational_partner, info, recorded_by, birthday, status, social_security_nr, advisor1, advisor2, advisor_email, ams_district', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -82,9 +81,9 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'course' => array(self::BELONGS_TO, 'Course', 'course_id'),
-			'courseTakens' => array(self::HAS_MANY, 'CourseTaken', 'user_id'),
-			'invoiceAddresses' => array(self::HAS_MANY, 'InvoiceAddress', 'user_id'),
+			'singCourseTakens' => array(self::HAS_MANY, 'SingCourseTaken', 'user_id'),
+			'singInvoiceAddresses' => array(self::HAS_MANY, 'SingInvoiceAddress', 'user_id'),
+			'course' => array(self::BELONGS_TO, 'SingCourse', 'course_id'),
 		);
 	}
 
@@ -95,7 +94,7 @@ class User extends CActiveRecord
 	{
 		return array(
 			'user_id' => 'User',
-			'password' => 'Password',
+			'internal_nr' => 'Internal Nr',
 			'course_id' => 'Course',
 			'salutation' => 'Salutation',
 			'title' => 'Title',
@@ -133,7 +132,7 @@ class User extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('user_id',$this->user_id);
-		$criteria->compare('password',$this->password,true);
+		$criteria->compare('internal_nr',$this->internal_nr,true);
 		$criteria->compare('course_id',$this->course_id);
 		$criteria->compare('salutation',$this->salutation,true);
 		$criteria->compare('title',$this->title,true);

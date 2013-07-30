@@ -9,8 +9,8 @@
 	<?php echo CHtml::link(CHtml::encode($data->user_id), array('view', 'id'=>$data->user_id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
-	<?php echo CHtml::encode($data->password); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('internal_nr')); ?>:</b>
+	<?php echo CHtml::encode($data->internal_nr); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('course_id')); ?>:</b>

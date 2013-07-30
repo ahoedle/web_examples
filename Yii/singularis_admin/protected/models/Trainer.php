@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "Trainer".
+ * This is the model class for table "sing_trainer".
  *
- * The followings are the available columns in table 'Trainer':
+ * The followings are the available columns in table 'sing_trainer':
  * @property integer $trainer_id
  * @property string $password
  * @property string $salutation
@@ -25,7 +25,7 @@
  * @property string $subjects
  *
  * The followings are the available model relations:
- * @property CourseGiven[] $courseGivens
+ * @property SingCourseGiven[] $singCourseGivens
  */
 class Trainer extends CActiveRecord
 {
@@ -44,7 +44,7 @@ class Trainer extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'Trainer';
+		return 'sing_trainer';
 	}
 
 	/**
@@ -74,7 +74,7 @@ class Trainer extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'courseGivens' => array(self::HAS_MANY, 'CourseGiven', 'trainer_id'),
+			'singCourseGivens' => array(self::HAS_MANY, 'SingCourseGiven', 'trainer_id'),
 		);
 	}
 
