@@ -19,43 +19,67 @@
 </head>
 
 <body>
+	<div id="container" id="page">
+		<header>
+		<?php
+		$this->widget('bootstrap.widgets.TbTabs', array(
+	'type'=>'tabs', // 'tabs' or 'pills'
+	'tabs'=>array(
+		array('label'=>'NEU', 'url'=>$this->createUrl('course/create'), 'active'=>true),
+		array('label'=>'NEU aus Vorlage', 'url'=>$this->createUrl('course/create')), //TODO
+/*
+		array('label'=>'Profile', 'content'=>'Profile Content'),
+		array('label'=>'Messages', 'content'=>'Messages Content'),
+*/
+	),
+));?>
+		</header>
+		
+		<nav>
+<?php
+$this->widget('bootstrap.widgets.TbMenu', array(
+'type'=>'list',
+'items' => array(
+array('label'=>'List header', 'itemOptions'=>array('class'=>'nav-header')),
+array('label'=>'Home', 'url'=>'#', 'itemOptions'=>array('class'=>'active')),
+array('label'=>'Library', 'url'=>'#'),
+array('label'=>'Applications', 'url'=>'#'),
+array('label'=>'Another list header', 'itemOptions'=>array('class'=>'nav-header')),
+array('label'=>'Profile', 'url'=>'#'),
+array('label'=>'Settings', 'url'=>'#'),
+'',
+array('label'=>'Help', 'url'=>'#'),
+)
+));
+?>
+		</nav>
 
-<div class="container" id="page">
+		<aside>
 
-	<div id="header">
-		<div id="logo"><?php /* echo CHtml::encode(Yii::app()->name); */ ?></div>
-	</div><!-- header -->
-
-	<div id="mainmenu">
-		<?php /*
-$this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); 
-*/?>
-	</div><!-- mainmenu -->
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
-
-	<?php echo $content; ?>
-
-	<div class="clear"></div>
-
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by ......<br/>
-		All Rights Reserved.<br/>
-
-	</div><!-- footer -->
-
-</div><!-- page -->
-
+		</aside>
+		
+		<section id="content">
+			<?php if(isset($this->breadcrumbs)):?>
+				<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+					'links'=>$this->breadcrumbs,
+				)); ?><!-- breadcrumbs -->
+			<?php endif?>
+		
+			<?php echo $content; ?>
+		
+			<div class="clear"></div>
+		</section>
+ 	
+		<footer>		
+			Copyright &copy; <?php echo date('Y'); ?> by <br/>
+			<?php echo CHtml::image('../../images/logo.gif'); ?>
+			<br/>
+			All Rights Reserved.<br/>
+		</footer>
+	</div>
 </body>
+
 </html>
+
+
+

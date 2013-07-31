@@ -4,17 +4,7 @@
 
 
 
-$this->widget('bootstrap.widgets.TbTabs', array(
-	'type'=>'tabs', // 'tabs' or 'pills'
-	'tabs'=>array(
-		array('label'=>'NEU', 'url'=>$this->createUrl('course/create'), 'active'=>true),
-		array('label'=>'NEU aus Vorlage', 'url'=>$this->createUrl('course/create')), //TODO
-/*
-		array('label'=>'Profile', 'content'=>'Profile Content'),
-		array('label'=>'Messages', 'content'=>'Messages Content'),
-*/
-	),
-));
+
 
 ?>
 

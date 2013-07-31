@@ -1104,3 +1104,252 @@ Stack trace:
 REQUEST_URI=/index.php/course/Dynamic
 in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (190)
 in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/30 18:31:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('images')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('images')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/images/l...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/course/images/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:31:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('images')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('images')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/images/l...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/course/images/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:32:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('images')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('images')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/images/l...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/course/images/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:32:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('images')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('images')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/images/l...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/course/images/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:33:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logo.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('logo.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('logo.gif')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/logo.gif')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/course/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:33:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logo.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('logo.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('logo.gif')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/logo.gif')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/course/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:33:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logo.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/images/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:33:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logo.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/images/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:33:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logo.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/images/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:33:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logo.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/images/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:33:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('images')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('images')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/images/l...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/course/images/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:33:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('images')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('images')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/images/l...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/course/images/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:35:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logo.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/images/logo.gif
+---
+2013/07/30 18:35:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/images/logo.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/images/l...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/images/images/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/images/logo.gif
+---
+2013/07/30 18:35:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/images/logo.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/images/l...')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/images/images/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/images/logo.gif
+---
+2013/07/30 18:35:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logo.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('logo.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('logo.gif')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/logo.gif')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/course/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:35:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logo.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('logo.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('logo.gif')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/logo.gif')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/course/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:35:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logo.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('logo.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('logo.gif')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/logo.gif')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/course/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:35:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logo.gif".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('logo.gif')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('logo.gif')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/logo.gif')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/course/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:36:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('images')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('images')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/images/l...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/course/images/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:36:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('images')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('images')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/images/l...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/course/images/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:36:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('images')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('images')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/images/l...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/course/images/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:36:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('images')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('images')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/images/l...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/course/images/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---
+2013/07/30 18:37:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CController.php(270): CController->missingAction('images')
+#1 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(282): CController->run('images')
+#2 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/images/l...')
+#3 /Applications/MAMP/htdocs/web_examples/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web_examples/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/singularis_admin/index.php/course/images/logo.gif
+HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
+---

@@ -1,3 +1,15 @@
+
+/* reset */
+* {
+margin: 0;
+padding: 0;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+header, footer, section, aside, nav, article { display: block;}
+
 body
 {
 	margin: 0;
@@ -11,15 +23,24 @@ body
 {
 	margin-top: 5px;
 	margin-bottom: 5px;
-	background: white;
-	border: 1px solid #C9E0ED;
+	background: #ffffff;
+	border: 1px solid #1b5475;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+}
+
+#container {
+/* max-width: 1200px; */
+min-width:960px;
+margin:10px  auto;
+background-color: #fff;
 }
 
 #header
 {
-	margin: 0;
+
 	padding: 0;
-	border-top: 3px solid #C9E0ED;
+	border-top: 0px solid #C9E0ED;
 }
 
 #content
@@ -32,6 +53,63 @@ body
 	padding: 20px 20px 20px 0;
 }
 
+/* ----------header for logo-------------- */
+header {
+	margin: 0 156px 0 251px;
+	padding: 20px 20px 0px 0;
+/* 	background:#ccc ; */
+}
+	
+header p{
+	text-transform:uppercase;
+	font-size:11px;
+
+}
+header img{ padding: 0 0 10px;}
+
+/* ----------------- content--------------------- */
+section#content {
+	background-color: #ffffff;
+margin:0px 156px 0px 251px;
+	min-height:600px;
+	min-width:600px;
+	padding:20px;
+	border-top: 1px solid #C9E0ED;
+	border-left: 1px solid #C9E0ED;
+	border-right: 1px solid #C9E0ED;
+
+}
+
+p, pre{
+padding:  0 0 20px;
+line-height:1.5em;
+}
+
+/* -------------- navigavtion------------- */
+nav {
+float: left;
+width: 250px;
+padding:20px;
+}
+/* -------------- side infos ------------- */
+aside{
+float: right;
+width: 250px;
+padding:20px;
+}
+/* -----------footer--------------------------- */
+footer {
+padding:20px;
+clear: both;
+border-top:5px solid #ccc;
+	font-size: 0.8em;
+	text-align: center;
+	border-top: 1px solid #C9E0ED;
+
+}
+
+
+/*
 #footer
 {
 	padding: 10px;
@@ -40,6 +118,7 @@ body
 	text-align: center;
 	border-top: 1px solid #C9E0ED;
 }
+*/
 
 #logo
 {

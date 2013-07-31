@@ -5,6 +5,7 @@ body
 	color: #555;
 	font: normal 10pt Arial,Helvetica,Verdana,"DejaVu Sans","Bitstream Vera Sans",Geneva,sans-serif;
 	background: #EFEFEF;
+	background-color: #C9E0ED;
 }
 
 h1
@@ -29,8 +30,10 @@ h3
 {
 	margin-top: 5px;
 	margin-bottom: 5px;
-	background: white;
-	border: 1px solid #C9E0ED;
+	background: #C9E0ED;
+	border: 2px solid #1b5475;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
 }
 
 #header
