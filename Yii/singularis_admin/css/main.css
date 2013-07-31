@@ -70,14 +70,14 @@ header img{ padding: 0 0 10px;}
 /* ----------------- content--------------------- */
 section#content {
 	background-color: #ffffff;
-margin:0px 156px 0px 251px;
+	margin:0px 249px 0px 229px;
 	min-height:600px;
 	min-width:600px;
 	padding:20px;
 	border-top: 1px solid #C9E0ED;
 	border-left: 1px solid #C9E0ED;
 	border-right: 1px solid #C9E0ED;
-
+	border-bottom: 1px solid #C9E0ED;
 }
 
 p, pre{
@@ -101,13 +101,22 @@ padding:20px;
 footer {
 padding:20px;
 clear: both;
-border-top:5px solid #ccc;
+/* border-top:5px solid #ccc; */
 	font-size: 0.8em;
 	text-align: center;
-	border-top: 1px solid #C9E0ED;
+/* 	border-top: 1px solid #C9E0ED; */
 
 }
+ 
+#horizontalForm {
+	padding: 19px 82px 20px 0px;
+	margin: 0px -285px 0px 0px;
+	border: 1px solid #E5E5E5;
+}
 
+#horizontalForm .form-actions {
+	border: none;
+}
 
 /*
 #footer

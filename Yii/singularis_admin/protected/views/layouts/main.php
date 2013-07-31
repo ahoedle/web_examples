@@ -21,37 +21,31 @@
 <body>
 	<div id="container" id="page">
 		<header>
-		<?php
-		$this->widget('bootstrap.widgets.TbTabs', array(
-	'type'=>'tabs', // 'tabs' or 'pills'
-	'tabs'=>array(
-		array('label'=>'NEU', 'url'=>$this->createUrl('course/create'), 'active'=>true),
-		array('label'=>'NEU aus Vorlage', 'url'=>$this->createUrl('course/create')), //TODO
-/*
-		array('label'=>'Profile', 'content'=>'Profile Content'),
-		array('label'=>'Messages', 'content'=>'Messages Content'),
-*/
-	),
-));?>
+	
+
 		</header>
 		
 		<nav>
-<?php
-$this->widget('bootstrap.widgets.TbMenu', array(
-'type'=>'list',
-'items' => array(
-array('label'=>'List header', 'itemOptions'=>array('class'=>'nav-header')),
-array('label'=>'Home', 'url'=>'#', 'itemOptions'=>array('class'=>'active')),
-array('label'=>'Library', 'url'=>'#'),
-array('label'=>'Applications', 'url'=>'#'),
-array('label'=>'Another list header', 'itemOptions'=>array('class'=>'nav-header')),
-array('label'=>'Profile', 'url'=>'#'),
-array('label'=>'Settings', 'url'=>'#'),
-'',
-array('label'=>'Help', 'url'=>'#'),
-)
-));
-?>
+		<?php
+		$this->widget('bootstrap.widgets.TbMenu', array(
+			'type'=>'list',
+			'items' => array(
+/* 				array('label'=>'Home', 'url'=>$this->createUrl(''), 'itemOptions'=>array('class'=>'active')), */
+				array('label'=>'Kurse', 'itemOptions'=>array('class'=>'nav-header')),
+				array('label'=>'Suche', 'url'=>$this->createUrl('course/admin'), 'itemOptions'=>array('class'=>'active')),
+				array('label'=>'Kurse', 'url'=>$this->createUrl('course/create')),
+/*
+				array('label'=>'Library', 'url'=>'#'),
+				array('label'=>'Applications', 'url'=>'#'),
+				array('label'=>'Another list header', 'itemOptions'=>array('class'=>'nav-header')),
+				array('label'=>'Profile', 'url'=>'#'),
+				array('label'=>'Settings', 'url'=>'#'),
+				'',
+				array('label'=>'Help', 'url'=>'#'),
+*/
+			)
+		));
+		?>
 		</nav>
 
 		<aside>
@@ -59,6 +53,9 @@ array('label'=>'Help', 'url'=>'#'),
 		</aside>
 		
 		<section id="content">
+		
+		
+		
 			<?php if(isset($this->breadcrumbs)):?>
 				<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 					'links'=>$this->breadcrumbs,

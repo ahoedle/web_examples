@@ -48,3 +48,7 @@ $this->menu=array(
 		'master_course_id',
 	),
 )); ?>
+
+<?php 
+	echo CHtml::button('Trainer zuweisen', array('submit' => $this->createUrl('course/addTrainer',array('course_id'=>$model->course_id))));
+?>

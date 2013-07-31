@@ -1353,3 +1353,1177 @@ Stack trace:
 REQUEST_URI=/Yii/singularis_admin/index.php/course/images/logo.gif
 HTTP_REFERER=http://localhost:8888/Yii/singularis_admin/index.php/course/create
 ---
+2013/07/31 13:40:03 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (73)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 13:40:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(73): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 13:40:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (73)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 13:40:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(73): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 13:45:03 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (73)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 13:45:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(73): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 13:45:19 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (73)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 13:45:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(73): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 13:45:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (73)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 13:45:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(73): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 13:49:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (78)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 13:49:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(78): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 13:49:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (78)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 13:49:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(78): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 13:50:48 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`trainer`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (80)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 13:50:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`trainer`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(80): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 13:51:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`trainer`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (80)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 13:51:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`trainer`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(80): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 13:53:12 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (80)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 13:53:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(80): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 13:58:58 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (85)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 13:58:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(85): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 13:59:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (86)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 13:59:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(86): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 14:00:41 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (84)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:00:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(84): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 14:04:06 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`) VALUES (:yp0).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (82)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:04:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`) VALUES (:yp0)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(82): CActiveRecord->insert()
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 14:06:35 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (87)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:06:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(87): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 14:07:19 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (87)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:07:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_3` FOREIGN KEY (`trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(87): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 14:07:53 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`) VALUES (:yp0).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (82)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:07:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`) VALUES (:yp0)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(82): CActiveRecord->save(false)
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 14:08:49 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`) VALUES (:yp0).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (82)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:08:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`) VALUES (:yp0)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(82): CActiveRecord->save(false)
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 14:09:04 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`) VALUES (:yp0).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (82)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:09:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`) VALUES (:yp0)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(82): CActiveRecord->save(false)
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 14:11:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`) VALUES (:yp0).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (82)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:11:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`) VALUES (:yp0)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(82): CActiveRecord->save(false)
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 14:12:50 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `is_lead_trainer`) VALUES (:yp0, :yp1).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (84)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:12:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `is_lead_trainer`) VALUES (:yp0, :yp1)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(84): CActiveRecord->save(false)
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 14:16:26 [error] [php] Array to string conversion (/Applications/MAMP/htdocs/web/Yii/yii/framework/db/schema/CDbColumnSchema.php:146)
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CourseGiven->insert()
+#1 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(84): CourseGiven->save()
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CourseController->runAction()
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CourseController->filterAccessControl()
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CourseController->runActionWithFilters()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CourseController->run()
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/course/create
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (84)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:16:43 [error] [php] Array to string conversion (/Applications/MAMP/htdocs/web/Yii/yii/framework/validators/CNumberValidator.php:83)
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(794): CourseGiven->validate()
+#1 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(84): CourseGiven->save()
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CourseController->runAction()
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CourseController->filterAccessControl()
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CourseController->runActionWithFilters()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CourseController->run()
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/course/create
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (84)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:20:03 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (90)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:20:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(90): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 14:27:17 [warning] [application] Failed to set unsafe attribute "course_id" of "Course".
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (73)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:27:58 [warning] [application] Failed to set unsafe attribute "course_id" of "Course".
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (73)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:27:58 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (90)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:27:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `sing_course` (`course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(90): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 14:28:52 [warning] [application] Failed to set unsafe attribute "course_id" of "Course".
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (73)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:28:52 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (87)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:28:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(87): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 14:29:26 [warning] [application] Failed to set unsafe attribute "course_id" of "Course".
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (73)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:29:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (87)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:29:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(87): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 14:30:51 [warning] [application] Failed to set unsafe attribute "course_id" of "Course".
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (73)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:32:02 [warning] [application] Failed to set unsafe attribute "course_id" of "Course".
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (73)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:32:22 [warning] [application] Failed to set unsafe attribute "course_id" of "Course".
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (73)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:32:32 [warning] [application] Failed to set unsafe attribute "course_id" of "Course".
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (73)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:34:31 [warning] [application] Failed to set unsafe attribute "course_id" of "Course".
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (73)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 14:47:17 [error] [exception.CException] exception 'CException' with message '"data" attribute cannot be blank' in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/TbSelect2.php:58
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(147): TbSelect2->init()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/input/TbInputHorizontal.php(634): CBaseController->widget('bootstrap.widge...', Array)
+#3 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/input/TbInput.php(341): TbInputHorizontal->select2Field()
+#4 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/input/TbInputHorizontal.php(28): TbInput->run()
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(173): TbInputHorizontal->run()
+#6 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/TbActiveForm.php(1102): CBaseController->widget('bootstrap.widge...', Array)
+#7 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/TbActiveForm.php(506): TbActiveForm->inputRow('select2', Object(Course), 'trainer', NULL, Array)
+#8 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/views/course/_form.php(90): TbActiveForm->select2Row(Object(Course), 'trainer', Array)
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(126): require('/Applications/M...')
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/M...', Array, true)
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/M...', Array, true)
+#12 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/views/course/create.php(13): CController->renderPartial('_form', Array)
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(126): require('/Applications/M...')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/M...', Array, true)
+#15 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/M...', Array, true)
+#16 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#17 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(99): CController->render('create', Array)
+#18 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#19 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#20 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#22 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#26 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#28 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#29 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#30 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/index.php/course/create
+---
+2013/07/31 14:47:48 [warning] [application] Failed to set unsafe attribute "course_id" of "Course".
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (73)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 15:09:53 [error] [php] Trying to get property of non-object (/Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/views/course/_form.php:89)
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(869): CourseController->renderFile()
+#1 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/views/course/create.php(13): CourseController->renderPartial()
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(126): require()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(95): CourseController->renderInternal()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(869): CourseController->renderFile()
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(782): CourseController->renderPartial()
+#6 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(99): CourseController->render()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CourseController->runAction()
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CourseController->filterAccessControl()
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CourseController->runActionWithFilters()
+#16 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CourseController->run()
+#17 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#19 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/course/create
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/views/course/_form.php (89)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/views/course/create.php (13)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (99)
+2013/07/31 15:21:37 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_5` FOREIGN KEY (`lead_trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (96)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 15:21:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_5` FOREIGN KEY (`lead_trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(96): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 15:22:56 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_5` FOREIGN KEY (`lead_trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (96)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 15:22:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_5` FOREIGN KEY (`lead_trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(96): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 15:24:45 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_5` FOREIGN KEY (`lead_trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (96)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 15:24:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_5` FOREIGN KEY (`lead_trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(96): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 15:25:20 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_5` FOREIGN KEY (`lead_trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (96)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 15:25:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_5` FOREIGN KEY (`lead_trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(96): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 15:27:32 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_5` FOREIGN KEY (`lead_trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (80)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 15:27:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course`, CONSTRAINT `sing_course_ibfk_5` FOREIGN KEY (`lead_trainer`) REFERENCES `sing_course_given` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(80): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 15:29:45 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2).
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php (89)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php (13)
+2013/07/31 15:29:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(89): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 15:58:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "course".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(270): CController->missingAction('course')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('course')
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/course/c...')
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/course/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 15:58:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo.gif".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logo.gif')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/images/logo.gif
+HTTP_REFERER=http://localhost:8888/index.php/course/course/create
+---
+2013/07/31 15:58:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo.gif".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logo.gif')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/images/logo.gif
+HTTP_REFERER=http://localhost:8888/index.php/course/course/create
+---
+2013/07/31 16:04:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "course".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(270): CController->missingAction('course')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('course')
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/course/c...')
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/course/course/create
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 16:04:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo.gif".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logo.gif')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/images/logo.gif
+HTTP_REFERER=http://localhost:8888/index.php/course/course/create
+---
+2013/07/31 16:04:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo.gif".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logo.gif')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/images/logo.gif
+HTTP_REFERER=http://localhost:8888/index.php/course/course/create
+---
+2013/07/31 16:17:49 [error] [exception.CException] exception 'CException' with message 'Property "Course.textField" is not defined.' in /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('textField')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/helpers/CHtml.php(2255): CActiveRecord->__get('textField')
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/helpers/CHtml.php(1980): CHtml::resolveValue(Object(Course), 'textField')
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/helpers/CHtml.php(1257): CHtml::activeInputField('text', Object(Course), 'textField', Array)
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/widgets/CActiveForm.php(657): CHtml::activeTextField(Object(Course), 'textField', Array)
+#5 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/input/TbInputInline.php(62): CActiveForm->textField(Object(Course), 'textField', Array)
+#6 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/input/TbInput.php(289): TbInputInline->textField()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(173): TbInput->run()
+#8 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/TbActiveForm.php(1102): CBaseController->widget('bootstrap.widge...', Array)
+#9 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/TbActiveForm.php(284): TbActiveForm->inputRow('text', Object(Course), 'textField', NULL, Array)
+#10 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/views/course/admin.php(49): TbActiveForm->textFieldRow(Object(Course), 'textField', Array)
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(126): require('/Applications/M...')
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/M...', Array, true)
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/M...', Array, true)
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(170): CController->render('admin', Array)
+#16 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionAdmin()
+#17 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#20 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#24 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#26 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/admin')
+#27 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#28 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/index.php/course/admin
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 16:18:01 [error] [exception.CException] exception 'CException' with message 'Property "Course." is not defined.' in /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/helpers/CHtml.php(2255): CActiveRecord->__get('')
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/helpers/CHtml.php(1980): CHtml::resolveValue(Object(Course), '')
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/helpers/CHtml.php(1257): CHtml::activeInputField('text', Object(Course), '', Array)
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/widgets/CActiveForm.php(657): CHtml::activeTextField(Object(Course), '', Array)
+#5 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/input/TbInputInline.php(62): CActiveForm->textField(Object(Course), '', Array)
+#6 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/input/TbInput.php(289): TbInputInline->textField()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(173): TbInput->run()
+#8 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/TbActiveForm.php(1102): CBaseController->widget('bootstrap.widge...', Array)
+#9 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/TbActiveForm.php(284): TbActiveForm->inputRow('text', Object(Course), '', NULL, Array)
+#10 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/views/course/admin.php(49): TbActiveForm->textFieldRow(Object(Course), '', Array)
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(126): require('/Applications/M...')
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/M...', Array, true)
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/M...', Array, true)
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#15 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(170): CController->render('admin', Array)
+#16 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionAdmin()
+#17 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#20 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#24 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#26 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/admin')
+#27 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#28 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/index.php/course/admin
+HTTP_REFERER=http://localhost:8888/index.php/course/create
+---
+2013/07/31 16:18:08 [error] [php] Illegal offset type in isset or empty (/Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php:590)
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/input/TbInput.php(289): TbInputSearch->textField()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(173): TbInputSearch->run()
+#2 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/TbActiveForm.php(1102): CourseController->widget()
+#3 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/TbActiveForm.php(284): TbActiveForm->inputRow()
+#4 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/views/course/admin.php(49): TbActiveForm->textFieldRow()
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(126): require()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(95): CourseController->renderInternal()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(869): CourseController->renderFile()
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(782): CourseController->renderPartial()
+#9 /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/controllers/CourseController.php(170): CourseController->render()
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionAdmin()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CourseController->runAction()
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#15 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CourseController->filterAccessControl()
+#16 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#17 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CourseController->runActionWithFilters()
+#19 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CourseController->run()
+#20 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#21 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/course/admin
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/input/TbInputInline.php (128)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/input/TbInputInline.php (60)
+in /Applications/MAMP/htdocs/web/Yii/singularis_admin/protected/extensions/bootstrap/widgets/input/TbInput.php (289)
+2013/07/31 16:35:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addTrainer".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(270): CController->missingAction('addTrainer')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('addTrainer')
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/addTrain...')
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/course/addTrainer?0%5Bid%5D=28
+HTTP_REFERER=http://localhost:8888/index.php/course/28
+---
+2013/07/31 16:36:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addTrainer".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(270): CController->missingAction('addTrainer')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('addTrainer')
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/addTrain...')
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/course/addTrainer?0%5Bid%5D=28
+HTTP_REFERER=http://localhost:8888/index.php/course/28
+---
+2013/07/31 16:37:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addTrainer".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(270): CController->missingAction('addTrainer')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('addTrainer')
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/addTrain...')
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/course/addTrainer?0[id]=28
+---
+2013/07/31 16:38:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addTrainer".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(270): CController->missingAction('addTrainer')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('addTrainer')
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/addTrain...')
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/course/addTrainer?course_id=28
+HTTP_REFERER=http://localhost:8888/index.php/course/28
+---
+2013/07/31 16:38:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addTrainer".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(270): CController->missingAction('addTrainer')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('addTrainer')
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/addTrain...')
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/course/addTrainer?course_id=28
+HTTP_REFERER=http://localhost:8888/index.php/course/28
+---
+2013/07/31 16:39:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('addTrainer')
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/addTrain...')
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/course/addTrainer?course_id=28
+HTTP_REFERER=http://localhost:8888/index.php/course/28
+---
+2013/07/31 16:39:23 [error] [exception.ReflectionException] exception 'ReflectionException' with message 'Trying to invoke protected method CourseController::actionAddTrainer() from scope ReflectionMethod' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CAction.php:108
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CourseController), Array)
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CourseController), Object(ReflectionMethod), Array)
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('addTrainer')
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/addTrain...')
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php/course/addTrainer?course_id=28
+HTTP_REFERER=http://localhost:8888/index.php/course/28
+---
+2013/07/31 16:40:04 [error] [exception.ReflectionException] exception 'ReflectionException' with message 'Trying to invoke protected method CourseController::actionAddTrainer() from scope ReflectionMethod' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CAction.php:108
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CourseController), Array)
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CourseController), Object(ReflectionMethod), Array)
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('addTrainer')
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/addTrain...')
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /Applications/MAMP/htdocs/web/Yii/singularis_admin/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php/course/addTrainer?course_id=28
+HTTP_REFERER=http://localhost:8888/index.php/course/28
+---

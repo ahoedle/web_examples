@@ -27,12 +27,14 @@
  * @property string $class_time
  * @property string $graduation
  * @property string $statistics
+ * @property integer $lead_trainer
  * @property integer $trainer
  * @property integer $master_course_id
  *
  * The followings are the available model relations:
- * @property SingMasterCourse $masterCourse
+ * @property SingCourseGiven $leadTrainer
  * @property SingCourseGiven $trainer0
+ * @property SingMasterCourse $masterCourse
  * @property SingCourseGiven[] $singCourseGivens
  * @property SingCourseTaken[] $singCourseTakens
  * @property SingUser[] $singUsers
@@ -65,13 +67,14 @@ class Course extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('min_participants, max_participants, price, trainer, master_course_id', 'numerical', 'integerOnly'=>true),
+			array('course_id', 'required'),
+			array('course_id, min_participants, max_participants, price, lead_trainer, trainer, master_course_id', 'numerical', 'integerOnly'=>true),
 			array('course_nr, center, start, end, expiry', 'length', 'max'=>20),
 			array('category1, category2, type, title, place, status, duration, ue, class_time, graduation, statistics', 'length', 'max'=>100),
 			array('requirement, content, description', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('course_id, course_nr, center, category1, category2, type, title, requirement, content, description, place, start, end, expiry, status, duration, ue, min_participants, max_participants, price, class_time, graduation, statistics, trainer, master_course_id', 'safe', 'on'=>'search'),
+			array('course_id, course_nr, center, category1, category2, type, title, requirement, content, description, place, start, end, expiry, status, duration, ue, min_participants, max_participants, price, class_time, graduation, statistics, lead_trainer, trainer, master_course_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -83,8 +86,9 @@ class Course extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'masterCourse' => array(self::BELONGS_TO, 'SingMasterCourse', 'master_course_id'),
+			'leadTrainer' => array(self::BELONGS_TO, 'SingCourseGiven', 'lead_trainer'),
 			'trainer0' => array(self::BELONGS_TO, 'SingCourseGiven', 'trainer'),
+			'masterCourse' => array(self::BELONGS_TO, 'SingMasterCourse', 'master_course_id'),
 			'singCourseGivens' => array(self::HAS_MANY, 'SingCourseGiven', 'course_id'),
 			'singCourseTakens' => array(self::HAS_MANY, 'SingCourseTaken', 'course_id'),
 			'singUsers' => array(self::HAS_MANY, 'SingUser', 'course_id'),
@@ -98,28 +102,29 @@ class Course extends CActiveRecord
 	{
 		return array(
 			'course_id' => 'Course',
-			'course_nr' => 'Kurs-Nr',
-			'center' => 'Zentrale',
-			'category1' => 'Kategorie',
-			'category2' => 'Zweite Kategorie',
-			'type' => 'Art',
-			'title' => 'Titel',
-			'requirement' => 'Voraussetzung',
-			'content' => 'Inhalt',
-			'description' => 'Beschreibung',
-			'place' => 'Ort',
-			'start' => 'Beginn',
-			'end' => 'Ende',
-			'expiry' => 'Ablaufdatum (für elearning)',
+			'course_nr' => 'Course Nr',
+			'center' => 'Center',
+			'category1' => 'Category1',
+			'category2' => 'Category2',
+			'type' => 'Type',
+			'title' => 'Title',
+			'requirement' => 'Requirement',
+			'content' => 'Content',
+			'description' => 'Description',
+			'place' => 'Place',
+			'start' => 'Start',
+			'end' => 'End',
+			'expiry' => 'Expiry',
 			'status' => 'Status',
-			'duration' => 'Kurszeiten',
-			'ue' => 'UE',
-			'min_participants' => 'Min. Teilnehmer',
-			'max_participants' => 'Max. Teilnehmer',
-			'price' => 'Preis',
-			'class_time' => 'Unterrichtszeit',
-			'graduation' => 'Abschluss',
-			'statistics' => 'Erwachsenenbildung - Statistik',
+			'duration' => 'Duration',
+			'ue' => 'Ue',
+			'min_participants' => 'Min Participants',
+			'max_participants' => 'Max Participants',
+			'price' => 'Price',
+			'class_time' => 'Class Time',
+			'graduation' => 'Graduation',
+			'statistics' => 'Statistics',
+			'lead_trainer' => 'Lead Trainer',
 			'trainer' => 'Trainer',
 			'master_course_id' => 'Master Course',
 		);
@@ -159,6 +164,7 @@ class Course extends CActiveRecord
 		$criteria->compare('class_time',$this->class_time,true);
 		$criteria->compare('graduation',$this->graduation,true);
 		$criteria->compare('statistics',$this->statistics,true);
+		$criteria->compare('lead_trainer',$this->lead_trainer);
 		$criteria->compare('trainer',$this->trainer);
 		$criteria->compare('master_course_id',$this->master_course_id);
 
