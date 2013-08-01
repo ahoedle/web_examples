@@ -28,7 +28,7 @@ class VetController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','listVets'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -54,6 +54,17 @@ class VetController extends Controller
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
+	}
+	
+	
+	public function actionListVets() {
+		// get all vets
+		$criteria = new CDbCriteria();
+		$criteria->order = "place ASC";
+		$model = Vet::model()->findAll($criteria);
+	
+		$this->render('vetList', array('model'=>$model));
+	
 	}
 
 	/**
@@ -188,4 +199,6 @@ class VetController extends Controller
 */
 		return $opening;
 	} 
+	
+
 }

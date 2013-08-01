@@ -76,7 +76,7 @@ class Vet extends CActiveRecord
 			'vet_id' => 'Vet',
 			'name' => 'Name',
 			'address' => 'Address',
-			'postcode' => 'Postcode',
+			'postcode' => 'PLZ',
 			'place' => 'Place',
 			'tel' => 'Tel',
 			'fax' => 'Fax',
