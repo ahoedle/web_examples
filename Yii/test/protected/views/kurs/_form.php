@@ -61,6 +61,4 @@ echo CHtml::ajaxSubmitButton('Submit', $this->createUrl("Kurs/speichern"), array
 
 <?php $this->endWidget(); ?>
 
-
-
 </div><!-- form -->

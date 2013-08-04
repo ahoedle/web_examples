@@ -200,4 +200,15 @@ class KursController extends Controller
 
 		$this->render('create',array('model'=>$model,));
 	}
+        
+        public function repeat($inputString)
+        {
+            return $inputString;
+        }
+     
+        public function concat($string1, $string2)
+        {
+            return $concat=$string1.' '.$string2;
+        }
+        
 }
