@@ -281,7 +281,7 @@ class CourseController extends Controller
 */
 
 	public function actionAddTrainer($course_id) {
-			
+
 	}
 
 }

@@ -32,7 +32,7 @@ class CourseController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update', 'dynamic', 'save', 'addTrainer'),
+				'actions'=>array('create','update', 'dynamic', 'save', 'addTrainer', 'chooseTemplate'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -67,38 +67,45 @@ class CourseController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Course']))
-		{
+		if(isset($_POST['Course'])) {
 	
 			$model->attributes=$_POST['Course'];
 			$model->course_id = $_POST['Course']['course_id'];
 			
-/*
-			if ($_POST['Course']['lead_trainer'] == 0) {
-				$model->lead_trainer = "";
-				$model->trainer = "";
-			} else {
-			
-					$course_given = new CourseGiven;
-					$attributes = array('trainer_id' => $_POST['Course']['lead_trainer'],
-										'course_id' => $_POST['Course']['course_id'],
-										'is_lead_trainer' => true);
-	
-					$course_given->attributes = $attributes;
-			
-			
-				if($course_given->save()) {
+			$model->lead_trainer = "";
+			$model->trainer = "";
+			$model->save();			
 
-					if ($model->save()) {
-						$this->redirect(array('view','id'=>$model->course_id));
-					}				
-				}
+			if ($_POST['Course']['lead_trainer'] != 0) {
+				$course_given = new CourseGiven;
+				$attributes = array('trainer_id' => $_POST['Course']['lead_trainer'],
+									'course_id' => $_POST['Course']['course_id'],
+									'is_lead_trainer' => true);
+	
+				$course_given->attributes = $attributes;
 				
+				$course_given->save();
+				
+				$model->lead_trainer = $_POST['Course']['lead_trainer'];
+				
+				$model->save();
+										
 			}
-*/
 			
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->course_id));
+			if ($_POST['Course']['trainer']) {
+				foreach($_POST['Course']['trainer'] as $trainer) {
+					$course_given = new CourseGiven;
+					$attributes = array('trainer_id' => $trainer,
+										'course_id' => $_POST['Course']['course_id'],
+										'is_lead_trainer' => false);
+		
+					$course_given->attributes = $attributes;
+					
+					$course_given->save();
+				}
+			}
+			
+			$this->redirect(array('update','id'=>$model->course_id));
 		}
 
 		$this->render('create',array(
@@ -279,9 +286,81 @@ class CourseController extends Controller
 	}
 
 */
-
-	public function actionAddTrainer($course_id) {
+	
+public function actionChooseTemplate() {
+	
+	if(isset($_POST['Course'])) {
+			$model=new Course;
+			$model->attributes=$_POST['Course'];
+			$model->course_id = $_POST['Course']['course_id'];
 			
-	}
-
+			$model->lead_trainer = "";
+			$model->trainer = "";
+			$model->save();			
+	
+			if ($_POST['Course']['lead_trainer'] != 0) {
+				$course_given = new CourseGiven;
+				$attributes = array('trainer_id' => $_POST['Course']['lead_trainer'],
+									'course_id' => $_POST['Course']['course_id'],
+									'is_lead_trainer' => true);
+	
+				$course_given->attributes = $attributes;
+				
+				$course_given->save();
+				
+				$model->lead_trainer = $_POST['Course']['lead_trainer'];
+				
+				$model->save();
+										
+			}
+			
+			if ($_POST['Course']['trainer']) {
+				foreach($_POST['Course']['trainer'] as $trainer) {
+					$course_given = new CourseGiven;
+					$attributes = array('trainer_id' => $trainer,
+										'course_id' => $_POST['Course']['course_id'],
+										'is_lead_trainer' => false);
+		
+					$course_given->attributes = $attributes;
+					
+					$course_given->save();
+				}
+			}
+			
+			$this->redirect(array('update','id'=>$model->course_id));
+	} else {
+		if (isset($_POST['Coursetemplate'])) {
+			
+			// get the model
+			$model = Coursetemplate::model()->find('title=:title', array(':title'=>$_POST['Coursetemplate']['title']));
+			
+			// create a course and assign the values from the template model
+			$course = new Course;
+			$course->category1 = $model->category1;
+			$course->category2 = $model->category2;
+			$course->type = $model->type;
+			$course->title = $model->title;
+			$course->requirement = $model->requirement;
+			$course->content = $model->content;
+			$course->description = $model->description;
+			$course->duration = $model->duration;
+			$course->ue = $model->ue;
+			$course->min_participants = $model->min_participants;
+			$course->max_participants = $model->max_participants;
+			$course->price = $model->price;
+			$course->class_time = $model->class_time;
+			$course->graduation = $model->graduation;
+			$course->statistics = $model->statistics;
+	
+			// render course/create
+			$this->render('create',array('model'=>$course));	
+			
+		} else {
+			$Criteria = new CDbCriteria();
+			$Criteria->order = "title ASC";
+			$model = Coursetemplate::model()->findAll($Criteria);
+	
+			$this->render('chooseTemplate',array('model'=>$model));	
+		}		
+	}}
 }

@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>' ',
 
 	// preloading 'log' component
 	'preload'=>array('log', 'bootstrap',),
@@ -48,7 +48,7 @@ return array(
 		),
 				'bootstrap' => array(
 		    'class' => 'ext.bootstrap.components.Bootstrap',
-		    'responsiveCss' => false,
+		    'responsiveCss' => true,
 		),
 /*
 		

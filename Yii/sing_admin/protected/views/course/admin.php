@@ -7,40 +7,66 @@ $this->breadcrumbs=array(
 	'Manage',
 );
 
+/*
 $this->menu=array(
 	array('label'=>'List Course', 'url'=>array('index')),
 	array('label'=>'Create Course', 'url'=>array('create')),
 );
+*/
 
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#course-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
 ?>
 
-<h1>Manage Courses</h1>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+<?php
+    $this->widget('bootstrap.widgets.TbExtendedGridView', array(
+    'filter'=>$model,
+    'fixedHeader' => true,
+    'headerOffset' => 40, // 40px is the height of the main navigation at bootstrap
+    'type'=>'striped bordered',
+    'dataProvider' => $model->search(),
+    'template' => "{items}",
+	'columns'=>array(
+/* 		'course_id', */
+		'course_nr',
+		'center',
+/*
+		'category1',
+		'category2',
+		'type',
+		'title',
+		'requirement',
+		'content',
+		'description',
+*/
+		'place',
+		'start',
+		'end',
+/* 		'expiry', */
+		'status',
+/* 		'duration', */
+/* 		'ue', */
+/*
+		'min_participants',
+		'max_participants',
+		'price',
+		'class_time',
+		'graduation',
+		'statistics',
+*/
+		'lead_trainer',
+		'trainer',
+/* 		'master_course_id', */
+		
+		array(
+			'class'=>'CButtonColumn',
+		),
+	),
+    ));
+?>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php /*
+$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'course-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
@@ -51,8 +77,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'category1',
 		'category2',
 		'type',
-		/*
-		'title',
+				'title',
 		'requirement',
 		'content',
 		'description',
@@ -72,9 +97,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'lead_trainer',
 		'trainer',
 		'master_course_id',
-		*/
+		
 		array(
 			'class'=>'CButtonColumn',
 		),
 	),
-)); ?>
+)); 
+*/?>

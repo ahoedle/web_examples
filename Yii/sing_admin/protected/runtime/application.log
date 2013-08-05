@@ -26,3 +26,737 @@ Stack trace:
 REQUEST_URI=/sing_admin/index.php/course/create
 HTTP_REFERER=http://localhost:8888/sing_admin/index.php/site/login
 ---
+2013/08/01 13:11:09 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_3` FOREIGN KEY (`trainer_id`) REFERENCES `sing_trainer` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2).
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (90)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 13:11:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_3` FOREIGN KEY (`trainer_id`) REFERENCES `sing_trainer` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(90): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sing_admin/index.php/course/create
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/course/create
+---
+2013/08/01 13:11:30 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_3` FOREIGN KEY (`trainer_id`) REFERENCES `sing_trainer` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2).
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (90)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 13:11:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_3` FOREIGN KEY (`trainer_id`) REFERENCES `sing_trainer` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(90): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sing_admin/index.php/course/create
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/course/create
+---
+2013/08/01 13:13:10 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_3` FOREIGN KEY (`trainer_id`) REFERENCES `sing_trainer` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2).
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (88)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 13:13:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_3` FOREIGN KEY (`trainer_id`) REFERENCES `sing_trainer` (`trainer_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(88): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sing_admin/index.php/course/create
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/course/create
+---
+2013/08/01 13:15:25 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2).
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (91)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 13:15:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(91): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sing_admin/index.php/course/create
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/course/create
+---
+2013/08/01 13:16:19 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23).
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (84)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 13:16:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(84): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sing_admin/index.php/course/create
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/course/create
+---
+2013/08/01 13:20:16 [error] [php] Undefined variable: course_given (/Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php:105)
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CourseController->runAction()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CourseController->filterAccessControl()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CourseController->runActionWithFilters()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CourseController->run()
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/sing_admin/index.php/course/create
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (105)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 13:20:40 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '3' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24).
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (89)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 13:20:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '3' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(89): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sing_admin/index.php/course/create
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/course/create
+---
+2013/08/01 13:23:04 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '3' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24).
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (91)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 13:23:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '3' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(91): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sing_admin/index.php/course/create
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/course/create
+---
+2013/08/01 13:23:52 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '3' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24).
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (103)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 13:23:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '3' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(103): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sing_admin/index.php/course/create
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/course/create
+---
+2013/08/01 13:26:02 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2).
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (103)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 13:26:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(103): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sing_admin/index.php/course/create
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/course/create
+---
+2013/08/01 13:27:11 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2).
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (101)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 13:27:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `sing_course_given` (`trainer_id`, `course_id`, `is_lead_trainer`) VALUES (:yp0, :yp1, :yp2)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(101): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sing_admin/index.php/course/create
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/course/create
+---
+2013/08/01 13:59:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('createWithTempl...')
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/createWi...')
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/sing_admin/index.php/course/createWithTemplate
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/course/create
+---
+2013/08/01 14:32:00 [error] [php] Undefined variable: model (/Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php:292)
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CourseController->runAction()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CourseController->filterAccessControl()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CourseController->runActionWithFilters()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CourseController->run()
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/sing_admin/index.php/course/createWithTemplate
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (292)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 14:34:00 [error] [php] array_key_exists() expects parameter 2 to be array, string given (/Applications/MAMP/htdocs/web/Yii/yii/framework/web/helpers/CHtml.php:441)
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(126): require()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(95): CourseController->renderInternal()
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(869): CourseController->renderFile()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(782): CourseController->renderPartial()
+#4 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(292): CourseController->render()
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreateWithTemplate()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CourseController->runAction()
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CourseController->filterAccessControl()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CourseController->runActionWithFilters()
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CourseController->run()
+#15 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/sing_admin/index.php/course/createWithTemplate
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/views/course/chooseTemplate.php (17)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (292)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 14:35:44 [error] [php] Undefined variable: model (/Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php:296)
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CourseController->runAction()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CourseController->filterAccessControl()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CourseController->runActionWithFilters()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CourseController->run()
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/sing_admin/index.php/course/createWithTemplate
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (296)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 14:35:53 [error] [php] array_key_exists() expects parameter 2 to be array, string given (/Applications/MAMP/htdocs/web/Yii/yii/framework/web/helpers/CHtml.php:441)
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(126): require()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CBaseController.php(95): CourseController->renderInternal()
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(869): CourseController->renderFile()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(782): CourseController->renderPartial()
+#4 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(296): CourseController->render()
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreateWithTemplate()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CourseController->runAction()
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CourseController->filterAccessControl()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CourseController->runActionWithFilters()
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CourseController->run()
+#15 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/sing_admin/index.php/course/createWithTemplate
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/views/course/chooseTemplate.php (17)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (296)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 14:56:14 [error] [exception.CException] exception 'CException' with message 'CourseController cannot find the requested view "chooseTemplate".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php:878
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(782): CController->renderPartial('chooseTemplate', Array, true)
+#1 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(296): CController->render('chooseTemplate', Array)
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreateWithTemplate()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('createWithTempl...')
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/createWi...')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/sing_admin/index.php/course/createWithTemplate
+---
+2013/08/01 14:56:39 [error] [exception.CException] exception 'CException' with message 'CourseController cannot find the requested view "chooseTemplate".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php:878
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(782): CController->renderPartial('chooseTemplate', Array, true)
+#1 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(296): CController->render('chooseTemplate', Array)
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreateWithTemplate()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('createWithTempl...')
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/createWi...')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/sing_admin/index.php/course/createWithTemplate
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/coursetemplate/chooseTemplate
+---
+2013/08/01 15:21:15 [error] [exception.CException] exception 'CException' with message 'CoursetemplateController cannot find the requested view "course/create".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php:878
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(782): CController->renderPartial('course/create', Array, true)
+#1 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CoursetemplateController.php(200): CController->render('course/create', Array)
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CoursetemplateController->actionChooseTemplate()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('chooseTemplate')
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('coursetemplate/...')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/sing_admin/index.php/coursetemplate/chooseTemplate
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/coursetemplate/chooseTemplate
+---
+2013/08/01 15:28:54 [error] [exception.CException] exception 'CException' with message 'CoursetemplateController cannot find the requested view "views.course.create".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php:878
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(782): CController->renderPartial('views.course.cr...', Array, true)
+#1 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CoursetemplateController.php(200): CController->render('views.course.cr...', Array)
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CoursetemplateController->actionChooseTemplate()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('chooseTemplate')
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('coursetemplate/...')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/sing_admin/index.php/coursetemplate/chooseTemplate
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/coursetemplate/chooseTemplate
+---
+2013/08/01 15:29:07 [error] [exception.CException] exception 'CException' with message 'CoursetemplateController cannot find the requested view "application.protected.views.course.create".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php:878
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(782): CController->renderPartial('application.pro...', Array, true)
+#1 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CoursetemplateController.php(200): CController->render('application.pro...', Array)
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CoursetemplateController->actionChooseTemplate()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('chooseTemplate')
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('coursetemplate/...')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/sing_admin/index.php/coursetemplate/chooseTemplate
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/coursetemplate/chooseTemplate
+---
+2013/08/01 15:31:29 [error] [exception.CException] exception 'CException' with message 'CoursetemplateController and its behaviors do not have a method or closure named "render_partial".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CoursetemplateController.php(200): CComponent->__call('render_partial', Array)
+#1 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CoursetemplateController.php(200): CoursetemplateController->render_partial('//course/create', Array)
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CoursetemplateController->actionChooseTemplate()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('chooseTemplate')
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('coursetemplate/...')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/sing_admin/index.php/coursetemplate/chooseTemplate
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/coursetemplate/chooseTemplate
+---
+2013/08/01 15:32:26 [error] [php] include(CourseController.php): failed to open stream: No such file or directory (/Applications/MAMP/htdocs/web/Yii/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CoursetemplateController.php(199): spl_autoload_call()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CoursetemplateController->actionChooseTemplate()
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CoursetemplateController->runAction()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CoursetemplateController->filterAccessControl()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CoursetemplateController->runActionWithFilters()
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CoursetemplateController->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/sing_admin/index.php/coursetemplate/chooseTemplate
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CoursetemplateController.php (199)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 15:33:02 [error] [php] include(CourseController.php): failed to open stream: No such file or directory (/Applications/MAMP/htdocs/web/Yii/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CoursetemplateController.php(199): spl_autoload_call()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CoursetemplateController->actionChooseTemplate()
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CoursetemplateController->runAction()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CoursetemplateController->filterAccessControl()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CoursetemplateController->runActionWithFilters()
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CoursetemplateController->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/sing_admin/index.php/coursetemplate/chooseTemplate
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CoursetemplateController.php (199)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 15:37:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chooseTemplate".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(270): CController->missingAction('chooseTemplate')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('chooseTemplate')
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('coursetemplate/...')
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sing_admin/index.php/coursetemplate/chooseTemplate
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/course/chooseTemplate
+---
+2013/08/01 15:37:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chooseTemplate".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(270): CController->missingAction('chooseTemplate')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('chooseTemplate')
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('coursetemplate/...')
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sing_admin/index.php/coursetemplate/chooseTemplate
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/course/chooseTemplate
+---
+2013/08/01 15:37:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "courset/chooseTemplate".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('courset/chooseT...')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sing_admin/index.php/courset/chooseTemplate
+---
+2013/08/01 15:41:34 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php:793) (/Applications/MAMP/htdocs/web/Yii/yii/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(369): CourseController->redirect()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionChooseTemplate()
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CourseController->runAction()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CourseController->filterAccessControl()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CourseController->runActionWithFilters()
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CourseController->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/sing_admin/index.php/course/chooseTemplate
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (369)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 16:04:05 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: DELETE FROM `sing_course` WHERE `sing_course`.`course_id`=1.
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (147)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/01 16:04:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`sing_admin`.`sing_course_given`, CONSTRAINT `sing_course_given_ibfk_4` FOREIGN KEY (`course_id`) REFERENCES `sing_course` (`course_id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: DELETE FROM `sing_course` WHERE `sing_course`.`course_id`=1' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1745): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1168): CActiveRecord->deleteByPk('1')
+#2 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(147): CActiveRecord->delete()
+#3 [internal function]: CourseController->actionDelete('1')
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CourseController), Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CourseController), Object(ReflectionMethod), Array)
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1116): CFilterChain->run()
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#16 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('delete')
+#18 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/delete')
+#19 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#20 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/sing_admin/index.php/course/delete/1?ajax=course-grid
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/course/admin
+---
+2013/08/01 16:22:57 [error] [php] Undefined variable: gridDataProvider (/Applications/MAMP/htdocs/web/Yii/sing_admin/protected/views/course/admin.php:23)
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(869): CourseController->renderFile()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(782): CourseController->renderPartial()
+#2 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(177): CourseController->render()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionAdmin()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CourseController->runAction()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CourseController->filterAccessControl()
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CourseController->runActionWithFilters()
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CourseController->run()
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/sing_admin/index.php/course/admin
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/views/course/admin.php (23)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (177)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/05 07:44:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addTrainer".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(270): CController->missingAction('addTrainer')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('addTrainer')
+#2 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/addTrain...')
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sing_admin/index.php/course/addTrainer?course_id=28
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/course/28
+---
+2013/08/05 07:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "web/Yii/singularis_admin/PhpStorm-1e580fbb-e7c8-4a49-b509-87188291fa4e.php".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('web/Yii/singula...')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sing_admin/index.php/web/Yii/singularis_admin/PhpStorm-1e580fbb-e7c8-4a49-b509-87188291fa4e.php
+---
+2013/08/05 08:01:10 [error] [php] Array to string conversion (/Applications/MAMP/htdocs/web/Yii/yii/framework/validators/CNumberValidator.php:83)
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(794): Course->validate()
+#1 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(131): Course->save()
+#2 unknown(0): CourseController->actionUpdate()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CourseController->runAction()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CourseController->filterAccessControl()
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CourseController->runActionWithFilters()
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CourseController->run()
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/sing_admin/index.php/course/update/14
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (131)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/05 08:01:27 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '15' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24).
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (77)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/05 08:01:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '15' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(77): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sing_admin/index.php/course/create
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/course/create
+---
+2013/08/05 08:04:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "web/Yii/sing_admin/PhpStorm-de657b8f-2d1b-4147-a911-a84ee70d2ee2.php".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('web/Yii/sing_ad...')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sing_admin/index.php/web/Yii/sing_admin/PhpStorm-de657b8f-2d1b-4147-a911-a84ee70d2ee2.php
+---
+2013/08/05 08:07:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "web/Yii/sing_admin/protected/tests/unit/_intellij_phpunit_launcher.php".' in /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('web/Yii/sing_ad...')
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sing_admin/index.php/web/Yii/sing_admin/protected/tests/unit/_intellij_phpunit_launcher.php?file=CDbTestCase.php&class=SaveTest&mode=c
+---
+2013/08/05 11:05:23 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '18' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24).
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php (77)
+in /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php (13)
+2013/08/05 11:05:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '18' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `sing_course` (`course_id`, `course_nr`, `center`, `category1`, `category2`, `type`, `title`, `requirement`, `content`, `description`, `place`, `start`, `end`, `expiry`, `status`, `duration`, `ue`, `min_participants`, `max_participants`, `price`, `class_time`, `graduation`, `statistics`, `lead_trainer`, `trainer`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24)' in /Applications/MAMP/htdocs/web/Yii/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/web/Yii/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/web/Yii/sing_admin/protected/controllers/CourseController.php(77): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/actions/CInlineAction.php(49): CourseController->actionCreate()
+#4 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/MAMP/htdocs/web/Yii/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('course/create')
+#14 /Applications/MAMP/htdocs/web/Yii/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/web/Yii/sing_admin/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sing_admin/index.php/course/create
+HTTP_REFERER=http://localhost:8888/sing_admin/index.php/course/create
+---

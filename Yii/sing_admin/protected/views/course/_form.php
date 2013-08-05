@@ -4,15 +4,15 @@
 /* @var $form CActiveForm */
 ?>
 
-		<?php
-		$this->widget('bootstrap.widgets.TbTabs', array(
-			'type'=>'tabs', // 'tabs' or 'pills'
-			'tabs'=>array(
-				array('label'=>'NEU', 'url'=>$this->createUrl('course/create'), 'active'=>true),
-				array('label'=>'NEU aus Vorlage', 'url'=>$this->createUrl('course/create')), //TODO
-			),
-		));
-		?>
+<?php
+$this->widget('bootstrap.widgets.TbTabs', array(
+	'type'=>'tabs', // 'tabs' or 'pills'
+	'tabs'=>array(
+		array('label'=>'NEU', 'url'=>$this->createUrl('course/create'), 'active'=>true),
+		array('label'=>'NEU aus Vorlage', 'url'=>$this->createUrl('course/chooseTemplate'), 'active'=>false), //TODO
+	),
+));
+?>
 
 
 <?php /** @var BootActiveForm $form */
@@ -87,8 +87,8 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     <?php echo $form->dropDownListRow($model, 'class_time', array_combine($class_time, $class_time)); ?>   
     <?php echo $form->dropDownListRow($model, 'graduation', array_combine($graduation, $graduation)); ?>    
 	<?php echo $form->checkBoxRow($model, 'statistics', array('disabled'=>false)); ?>
-    <?php /* echo $form->dropDownListRow($model, 'lead_trainer', $trainer);  */?>       
-	<?php /* echo $form->checkBoxListRow($model, 'trainer', $t); */ ?>
+    <?php echo $form->dropDownListRow($model, 'lead_trainer', $trainer); ?>       
+	<?php echo $form->checkBoxListRow($model, 'trainer', $t); ?>
 
 </fieldset>
 
